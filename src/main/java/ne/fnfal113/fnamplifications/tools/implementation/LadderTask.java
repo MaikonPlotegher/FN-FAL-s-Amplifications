@@ -1,6 +1,6 @@
 package ne.fnfal113.fnamplifications.tools.implementation;
 
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
+import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItem;
 
 import me.mrCookieSlime.Slimefun.api.BlockStorage;
 import ne.fnfal113.fnamplifications.FNAmplifications;

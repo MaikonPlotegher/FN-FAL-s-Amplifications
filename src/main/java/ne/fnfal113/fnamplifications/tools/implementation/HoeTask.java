@@ -1,8 +1,8 @@
 package ne.fnfal113.fnamplifications.tools.implementation;
 
-import io.github.thebusybiscuit.slimefun4.api.MinecraftVersion;
-import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.protection.Interaction;
+import io.github.thebusybiscuit.slimefun5.api.MinecraftVersion;
+import io.github.thebusybiscuit.slimefun5.implementation.Slimefun;
+import io.github.thebusybiscuit.slimefun5.libraries.dough.protection.Interaction;
 
 import ne.fnfal113.fnamplifications.FNAmplifications;
 import ne.fnfal113.fnamplifications.utils.Utils;
@@ -26,29 +26,22 @@ import java.util.Set;
 
 public class HoeTask {
 
-    private static Material GRASS_PATH = Material.matchMaterial("GRASS_PATH");
-
     private static final Set<Material> MAT = new HashSet<>();
 
     static {
-        if (Slimefun.getMinecraftVersion().isAtLeast(MinecraftVersion.MINECRAFT_1_17)) {
-            GRASS_PATH = Material.DIRT_PATH;
-        }
-        
         MAT.addAll(Tag.FLOWERS.getValues());
         MAT.addAll(Tag.SMALL_FLOWERS.getValues());
-        MAT.addAll(Tag.TALL_FLOWERS.getValues());
         MAT.addAll(Tag.SAPLINGS.getValues());
     }
 
     private final Set<Material> dirtBlocks = EnumSet.of(
             Material.DIRT,
             Material.GRASS_BLOCK,
-            GRASS_PATH
+            Material.DIRT_PATH
     );
 
     private final Set<Material> grass = EnumSet.of(
-            VersionedMaterial.SHORT_GRASS,
+            Material.SHORT_GRASS,
             Material.FERN,
             Material.LARGE_FERN,
             Material.TALL_GRASS

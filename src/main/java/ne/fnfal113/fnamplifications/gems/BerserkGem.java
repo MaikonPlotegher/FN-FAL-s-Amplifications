@@ -1,9 +1,9 @@
 package ne.fnfal113.fnamplifications.gems;
 
-import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
-import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
+import io.github.thebusybiscuit.slimefun5.api.items.ItemGroup;
+import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItem;
+import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItemStack;
+import io.github.thebusybiscuit.slimefun5.api.recipes.RecipeType;
 
 import ne.fnfal113.fnamplifications.gems.abstracts.AbstractGem;
 import ne.fnfal113.fnamplifications.gems.handlers.GemUpgrade;
@@ -57,7 +57,7 @@ public class BerserkGem extends AbstractGem implements OnDamageHandler, GemUpgra
         int tier = getTier(itemStack, this.getId());
 
         if(ThreadLocalRandom.current().nextInt(100) < getChance() / tier) {
-            double playerDefaultHealth = Objects.requireNonNull(damager.getAttribute(Attribute.GENERIC_MAX_HEALTH)).getValue();
+            double playerDefaultHealth = Objects.requireNonNull(damager.getAttribute(Attribute.MAX_HEALTH)).getValue();
             double playerCurrentHealth = damager.getHealth();
 
             if(playerCurrentHealth <= 0 || playerDefaultHealth <= 0) return;

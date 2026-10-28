@@ -1,13 +1,13 @@
 package ne.fnfal113.fnamplifications.multiblocks;
 
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
-import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
-import io.github.thebusybiscuit.slimefun4.core.multiblocks.MultiBlockMachine;
-import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.items.ItemUtils;
-import io.github.thebusybiscuit.slimefun4.libraries.paperlib.PaperLib;
-import io.github.thebusybiscuit.slimefun4.utils.SlimefunUtils;
-import io.github.thebusybiscuit.slimefun4.utils.compatibility.VersionedParticle;
+import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItem;
+import io.github.thebusybiscuit.slimefun5.api.recipes.RecipeType;
+import io.github.thebusybiscuit.slimefun5.core.multiblocks.MultiBlockMachine;
+import io.github.thebusybiscuit.slimefun5.implementation.Slimefun;
+import io.github.thebusybiscuit.slimefun5.libraries.dough.items.ItemUtils;
+import io.github.thebusybiscuit.slimefun5.libraries.paperlib.PaperLib;
+import io.github.thebusybiscuit.slimefun5.utils.SlimefunUtils;
+import io.github.thebusybiscuit.slimefun5.utils.compatibility.VersionedParticle;
 
 import ne.fnfal113.fnamplifications.FNAmplifications;
 import ne.fnfal113.fnamplifications.gems.handlers.GemUpgrade;
@@ -18,7 +18,7 @@ import ne.fnfal113.fnamplifications.utils.Utils;
 import org.bukkit.Bukkit;
 import org.bukkit.Effect;
 import org.bukkit.Material;
-import org.bukkit.NamespacedKey;
+import io.github.thebusybiscuit.slimefun5.libraries.keys.NamespacedKey;
 import org.bukkit.Particle;
 import org.bukkit.Sound;
 import org.bukkit.block.Block;
@@ -95,7 +95,7 @@ public class FnGemDowngrader extends MultiBlockMachine {
         for(int i : slot) {
             if(i == 4) continue;
 
-            if(!SlimefunUtils.isItemSimilar(inv.getContents()[i], FNAmpItems.FN_GEM_FINE_JASPER_CRAFTING, true, false)) {
+            if(!SlimefunUtils.isItemSimilar(inv.getContents()[i], FNAmpItems.FN_GEM_FINE_JASPER_CRAFTING.item(), true, false)) {
                 return false;
             }
         }
@@ -179,7 +179,7 @@ public class FnGemDowngrader extends MultiBlockMachine {
     public ItemStack setOutput(ItemStack output, String id) {
         ItemMeta meta = output.getItemMeta();
         PersistentDataContainer pdc = meta.getPersistentDataContainer();
-        NamespacedKey key = Keys.createKey(id + "_gem_tier");
+        org.bukkit.NamespacedKey key = Keys.createKey(id + "_gem_tier");
         int tier = pdc.getOrDefault(key, PersistentDataType.INTEGER, 4);
 
         pdc.set(key, PersistentDataType.INTEGER, tier + 1);

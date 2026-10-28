@@ -16,11 +16,20 @@ import java.text.DecimalFormatSymbols;
 import java.util.List;
 import java.util.Locale;
 
+import io.github.thebusybiscuit.slimefun5.utils.compatibility.VersionedPlayerHead;
+
 /**
  * utility class for FNAmplifications
  * @author FN_FAL113
  */
 public class Utils {
+
+    public static ItemStack getCustomHead(String texture) {
+        if (texture != null && !texture.startsWith("ey")) {
+            return VersionedPlayerHead.getItemStack(VersionedPlayerHead.hashToBase64(texture));
+        }
+        return VersionedPlayerHead.getItemStack(texture);
+    }
 
     public static final DecimalFormat powerFormat = new DecimalFormat("###,###.##",
         DecimalFormatSymbols.getInstance(Locale.ROOT));
@@ -75,7 +84,9 @@ public class Utils {
      */
     public static void setGemTierLore(ItemStack itemStack, String configSection, String configSectionSetting, String stringToReplace, String color, String suffix, int tier, String fileName) {
         ItemMeta meta = itemStack.getItemMeta();
+        if (meta == null) return;
         List<String> lore = meta.getLore();
+        if (lore == null || lore.isEmpty()) return;
 
         for(int i = 0; i < lore.size(); i++) {
             if(lore.get(i).contains(Utils.colorTranslator(color + stringToReplace))){
@@ -101,7 +112,9 @@ public class Utils {
      */
     public static void setLoreByConfigValue(@Nonnull ItemStack itemStack, String configSection, String configSectionSetting, String stringToReplace, String color, String suffix, String fileName){
         ItemMeta meta = itemStack.getItemMeta();
+        if (meta == null) return;
         List<String> lore = meta.getLore();
+        if (lore == null || lore.isEmpty()) return;
 
         for(int i = 0; i < lore.size(); i++){
             if(lore.get(i).contains(Utils.colorTranslator(color + stringToReplace))){
@@ -126,7 +139,10 @@ public class Utils {
      * @param suffix the end string of the pdc value (units, percent, etc)
      */
     public static void setLoreByPdc(ItemStack itemStack, ItemMeta meta, String value, String prefix, String color, String color2, String suffix){
+        if (meta == null) return;
         List<String> lore = meta.getLore();
+        if (lore == null || lore.isEmpty()) return;
+
         for(int i = 0; i < lore.size(); i++){
             if(lore.get(i).contains(Utils.colorTranslator(color + prefix))){
                 lore.set(i, Utils.colorTranslator(color + prefix + color2 + value + suffix));
@@ -139,6 +155,26 @@ public class Utils {
 
     public static Long cooldownHelper(Long timeInMs){
         return (long) Math.floor((System.currentTimeMillis() - timeInMs) / 1000);
+    }
+
+    public static ItemStack[] recipe(Object... inputs) {
+        if (inputs == null) return new ItemStack[0];
+        ItemStack[] items = new ItemStack[inputs.length];
+        for (int i = 0; i < inputs.length; i++) {
+            Object obj = inputs[i];
+            if (obj == null) {
+                items[i] = null;
+            } else if (obj instanceof io.github.thebusybiscuit.slimefun5.api.items.SlimefunItemStack sf) {
+                items[i] = sf.item().clone();
+            } else if (obj instanceof ItemStack is) {
+                items[i] = is;
+            } else if (obj instanceof org.bukkit.Material mat) {
+                items[i] = new ItemStack(mat);
+            } else {
+                throw new IllegalArgumentException("Unknown recipe input type: " + obj.getClass());
+            }
+        }
+        return items;
     }
 
 }

@@ -1,12 +1,12 @@
 package ne.fnfal113.fnamplifications.tools;
 
-import io.github.thebusybiscuit.slimefun4.api.MinecraftVersion;
-import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
-import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
-import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.protection.Interaction;
+import io.github.thebusybiscuit.slimefun5.api.MinecraftVersion;
+import io.github.thebusybiscuit.slimefun5.api.items.ItemGroup;
+import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItem;
+import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItemStack;
+import io.github.thebusybiscuit.slimefun5.api.recipes.RecipeType;
+import io.github.thebusybiscuit.slimefun5.implementation.Slimefun;
+import io.github.thebusybiscuit.slimefun5.libraries.dough.protection.Interaction;
 
 import me.mrCookieSlime.Slimefun.api.BlockStorage;
 
@@ -163,7 +163,7 @@ public class ThrowableTorch extends SlimefunItem {
             blockHitRelative.setType(Material.TORCH);
         }
 
-        Bukkit.getScheduler().runTaskLater(FNAmplifications.getInstance(), () -> BlockStorage.store(blockHitRelative, FNAmpItems.FN_THROWABLE_TORCH), 2L);
+        Bukkit.getScheduler().runTaskLater(FNAmplifications.getInstance(), () -> BlockStorage.store(blockHitRelative, FNAmpItems.FN_THROWABLE_TORCH.getItemId()), 2L);
     }
 
     public boolean blockNameContains(Block blockHit, String name){

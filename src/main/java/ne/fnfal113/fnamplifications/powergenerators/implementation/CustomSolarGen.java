@@ -1,5 +1,6 @@
 package ne.fnfal113.fnamplifications.powergenerators.implementation;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.bukkit.Location;
@@ -7,14 +8,14 @@ import org.bukkit.World;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
-import io.github.thebusybiscuit.slimefun4.api.events.PlayerRightClickEvent;
-import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
-import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
-import io.github.thebusybiscuit.slimefun4.core.attributes.EnergyNetProvider;
-import io.github.thebusybiscuit.slimefun4.core.handlers.BlockUseHandler;
-import io.github.thebusybiscuit.slimefun4.utils.LoreBuilder;
+import io.github.thebusybiscuit.slimefun5.api.events.PlayerRightClickEvent;
+import io.github.thebusybiscuit.slimefun5.api.items.ItemGroup;
+import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItem;
+import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItemStack;
+import io.github.thebusybiscuit.slimefun5.api.recipes.RecipeType;
+import io.github.thebusybiscuit.slimefun5.core.attributes.EnergyNetProvider;
+import io.github.thebusybiscuit.slimefun5.core.handlers.BlockUseHandler;
+import io.github.thebusybiscuit.slimefun5.utils.LoreBuilder;
 import me.mrCookieSlime.CSCoreLibPlugin.Configuration.Config;
 
 import ne.fnfal113.fnamplifications.FNAmplifications;
@@ -38,7 +39,8 @@ public class CustomSolarGen extends SlimefunItem implements EnergyNetProvider {
 
     public void setLore(ItemStack itemStack){
         ItemMeta meta = itemStack.getItemMeta();
-        List<String> lore = meta.getLore();
+        if (meta == null) return;
+        List<String> lore = meta.hasLore() && meta.getLore() != null ? meta.getLore() : new ArrayList<>();
         lore.add(Utils.colorTranslator(LoreBuilder.powerBuffer(FNAmplifications.getInstance().getConfigManager().getCustomConfig("solar-generator-settings").getInt(this.getId() + "." + "capacity"))));
         lore.add(Utils.colorTranslator(LoreBuilder.powerPerSecond(FNAmplifications.getInstance().getConfigManager().getCustomConfig("solar-generator-settings").getInt(this.getId() + "." + "dayEnergy"))));
         meta.setLore(lore);

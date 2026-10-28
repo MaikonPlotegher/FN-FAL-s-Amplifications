@@ -2,9 +2,9 @@ package ne.fnfal113.fnamplifications.tools.implementation;
 
 import com.google.common.collect.Sets;
 
-import io.github.thebusybiscuit.slimefun4.api.MinecraftVersion;
-import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.protection.Interaction;
+import io.github.thebusybiscuit.slimefun5.api.MinecraftVersion;
+import io.github.thebusybiscuit.slimefun5.implementation.Slimefun;
+import io.github.thebusybiscuit.slimefun5.libraries.dough.protection.Interaction;
 
 import ne.fnfal113.fnamplifications.utils.Utils;
 
@@ -65,8 +65,7 @@ public class BlockRotatorTask {
         BlockData blockData = block.getBlockData();
 
         if(player.isSneaking()) {
-            if(Tag.DOORS.isTagged(block.getType()) || Tag.TALL_FLOWERS.isTagged(block.getType()) ||
-                    Tag.FLOWERS.isTagged(block.getType())){
+            if(Tag.DOORS.isTagged(block.getType()) || Tag.FLOWERS.isTagged(block.getType())){
                 return;
             }
 

@@ -22,6 +22,7 @@ import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ThreadLocalRandom;
@@ -107,9 +108,8 @@ public class StickTask {
 
     public void convertToStick(ItemStack item) {
         ItemMeta meta = item.getItemMeta();
-        List<String> lore = meta.getLore();
-
-        lore.clear();
+        if (meta == null) return;
+        List<String> lore = new ArrayList<>();
         lore.add(getStickLore());
 
         meta.setLore(lore);
@@ -162,7 +162,8 @@ public class StickTask {
      * @param xpLevelDeduction the amount of xp levels deducted from the owner
      */
     public void itemMetaUpdate(ItemStack item, ItemMeta meta, String loreType, int damageInflicted, int xpLevelDeduction, boolean isLevelDeducted) {
-        List<String> lore2 = meta.getLore();
+        if (meta == null) return;
+        List<String> lore2 = meta.hasLore() && meta.getLore() != null ? meta.getLore() : new ArrayList<>();
         PersistentDataContainer pdc = meta.getPersistentDataContainer();
 
         int xpAmount = getPdc(pdc, getXpKey());
@@ -175,7 +176,11 @@ public class StickTask {
         pdc.set(getXpKey(), PersistentDataType.INTEGER, xpAmount);
         pdc.set(getDamageInflictedKey(), PersistentDataType.INTEGER, damageAmount);
 
-        lore2.set(0, loreType);
+        if (lore2.isEmpty()) {
+            lore2.add(loreType);
+        } else {
+            lore2.set(0, loreType);
+        }
         
         try {
             lore2.set(1, ChatColor.YELLOW + "Total Exp Levels Consumed: " + ChatColor.WHITE + xpAmount);

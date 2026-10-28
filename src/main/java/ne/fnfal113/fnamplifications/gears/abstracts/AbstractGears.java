@@ -1,10 +1,10 @@
 package ne.fnfal113.fnamplifications.gears.abstracts;
 
 import com.google.gson.JsonObject;
-import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
-import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
+import io.github.thebusybiscuit.slimefun5.api.items.ItemGroup;
+import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItem;
+import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItemStack;
+import io.github.thebusybiscuit.slimefun5.api.recipes.RecipeType;
 import ne.fnfal113.fnamplifications.FNAmplifications;
 import ne.fnfal113.fnamplifications.config.ConfigManager;
 import ne.fnfal113.fnamplifications.gears.implementation.GearTask;
@@ -58,7 +58,7 @@ public abstract class AbstractGears extends SlimefunItem {
         this.maxLevel = getConfigManager().getCustomConfig("fn-gear-level-settings").getInt(this.getId() + "." + "max-level");
         this.maxAttributes = getConfigManager().getCustomConfig("fn-gear-level-settings").getInt(this.getId() + "." + "max-attributes");
         this.equipmentSlot = equipmentSlot;
-        this.gearTask = new GearTask(getDefaultUsageKey(), getDefaultUsageKey2(), getDefaultUsageKey3(), item, startingProgress, incrementingProgress, getMaxLevel());
+        this.gearTask = new GearTask(getDefaultUsageKey(), getDefaultUsageKey2(), getDefaultUsageKey3(), item.item(), startingProgress, incrementingProgress, getMaxLevel());
     }
 
     public void initializeSettings(int maxLevel, int maxAttributes) {
@@ -185,13 +185,20 @@ public abstract class AbstractGears extends SlimefunItem {
                     double attributeValue = getConfigManager().getCustomConfig("fn-gear-level-settings").getDouble(levelSection + "." + "bonus-attributes" + "." + "attribute-" + i + "." + "attribute-value");
 
                     if (attribute != null && attributeValue != 0.0) {
-                        if(meta.getAttributeModifiers(getEquipmentSlot()).asMap().containsKey(Attribute.valueOf(attribute))) {
-                            meta.removeAttributeModifier(Attribute.valueOf(attribute));
+                        String attrKey = attribute.startsWith("GENERIC_") ? attribute.substring("GENERIC_".length()) : attribute;
+                        Attribute targetAttr;
+                        try {
+                            targetAttr = Attribute.valueOf(attrKey);
+                        } catch (IllegalArgumentException e) {
+                            targetAttr = Attribute.valueOf(attribute);
+                        }
+                        if(meta.getAttributeModifiers(getEquipmentSlot()).asMap().containsKey(targetAttr)) {
+                            meta.removeAttributeModifier(targetAttr);
                         }
 
-                        meta.addAttributeModifier(Attribute.valueOf(attribute), new AttributeModifier(
+                        meta.addAttributeModifier(targetAttr, new AttributeModifier(
                                 UUID.randomUUID(),
-                                "generic." + attribute.toLowerCase() + "." + armor.getType().toString().toLowerCase(),
+                                "generic." + attrKey.toLowerCase() + "." + armor.getType().toString().toLowerCase(),
                                 attributeValue,
                                 AttributeModifier.Operation.ADD_NUMBER, slot));
                     }

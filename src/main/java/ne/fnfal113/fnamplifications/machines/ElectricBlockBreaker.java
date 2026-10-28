@@ -1,19 +1,19 @@
 package ne.fnfal113.fnamplifications.machines;
 
-import io.github.thebusybiscuit.slimefun4.api.MinecraftVersion;
-import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
-import io.github.thebusybiscuit.slimefun4.api.items.ItemState;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
-import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
-import io.github.thebusybiscuit.slimefun4.core.attributes.EnergyNetComponent;
-import io.github.thebusybiscuit.slimefun4.core.handlers.BlockPlaceHandler;
-import io.github.thebusybiscuit.slimefun4.core.networks.energy.EnergyNetComponentType;
-import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.protection.Interaction;
-import io.github.thebusybiscuit.slimefun4.utils.ChestMenuUtils;
-import io.github.thebusybiscuit.slimefun4.utils.compatibility.VersionedParticle;
+import io.github.thebusybiscuit.slimefun5.api.MinecraftVersion;
+import io.github.thebusybiscuit.slimefun5.api.items.ItemGroup;
+import io.github.thebusybiscuit.slimefun5.api.items.ItemState;
+import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItem;
+import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItemStack;
+import io.github.thebusybiscuit.slimefun5.api.recipes.RecipeType;
+import io.github.thebusybiscuit.slimefun5.core.attributes.EnergyNetComponent;
+import io.github.thebusybiscuit.slimefun5.core.handlers.BlockPlaceHandler;
+import io.github.thebusybiscuit.slimefun5.core.networks.energy.EnergyNetComponentType;
+import io.github.thebusybiscuit.slimefun5.implementation.Slimefun;
+import io.github.thebusybiscuit.slimefun5.libraries.dough.items.CustomItemStack;
+import io.github.thebusybiscuit.slimefun5.libraries.dough.protection.Interaction;
+import io.github.thebusybiscuit.slimefun5.utils.ChestMenuUtils;
+import io.github.thebusybiscuit.slimefun5.utils.compatibility.VersionedParticle;
 import me.mrCookieSlime.CSCoreLibPlugin.Configuration.Config;
 import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.interfaces.InventoryBlock;
 import me.mrCookieSlime.Slimefun.Objects.handlers.BlockTicker;
@@ -61,40 +61,40 @@ public class ElectricBlockBreaker extends SlimefunItem implements InventoryBlock
     public static final int ON_OFF = 8;
     private static final ItemStack VERSIONED_AMETHYST;
 
-    private static final CustomItemStack NOT_OPERATING = new CustomItemStack(Material.ORANGE_STAINED_GLASS_PANE,
+    private static final ItemStack NOT_OPERATING = CustomItemStack.create(Material.ORANGE_STAINED_GLASS_PANE,
         "&cNot Operating...",
         "&ePlace a block facing the dispenser!"
     );
 
-    private static final CustomItemStack NO_POWER = new CustomItemStack(Material.RED_STAINED_GLASS_PANE,
+    private static final ItemStack NO_POWER = CustomItemStack.create(Material.RED_STAINED_GLASS_PANE,
         "&cNo Power!",
         "&ePower it up first!"
     );
 
-    private static final CustomItemStack NOT_RUNNING = new CustomItemStack(Material.YELLOW_STAINED_GLASS_PANE,
+    private static final ItemStack NOT_RUNNING = CustomItemStack.create(Material.YELLOW_STAINED_GLASS_PANE,
         "&cNot Running",
         "&eToggle it on first"
     );
 
-    private static final CustomItemStack BREAK_BLOCK_NATURALLY = new CustomItemStack(Material.PINK_STAINED_GLASS_PANE,
+    private static final ItemStack BREAK_BLOCK_NATURALLY = CustomItemStack.create(Material.PINK_STAINED_GLASS_PANE,
         "&d&lMode:",
         "&eBreak block naturally (No Silk Touch)",
         "Click to change"
     );
 
-    private static final CustomItemStack DROP_BLOCK_NATURALLY = new CustomItemStack(Material.CYAN_STAINED_GLASS_PANE,
+    private static final ItemStack DROP_BLOCK_NATURALLY = CustomItemStack.create(Material.CYAN_STAINED_GLASS_PANE,
         "&d&lMode:",
         "&eDrop block naturally (Silk Touch)",
         "Click to change"
     );
 
-    private static final CustomItemStack TOGGLED_ON = new CustomItemStack(Material.BLUE_STAINED_GLASS_PANE,
+    private static final ItemStack TOGGLED_ON = CustomItemStack.create(Material.BLUE_STAINED_GLASS_PANE,
         "&d&lToggle:",
         "&eEnabled (Running)",
         "Click to change"
     );
 
-    private static final CustomItemStack TOGGLED_OFF = new CustomItemStack(Material.WHITE_STAINED_GLASS_PANE,
+    private static final ItemStack TOGGLED_OFF = CustomItemStack.create(Material.WHITE_STAINED_GLASS_PANE,
         "&d&lToggle:",
         "&eDisabled (Not Running)",
         "Click to change"
@@ -162,7 +162,7 @@ public class ElectricBlockBreaker extends SlimefunItem implements InventoryBlock
             }
         );
 
-        createPreset(this, getInventoryTitle(), blockMenuPreset -> {
+        createHeaderlessPreset(this, getInventoryTitle(), blockMenuPreset -> {
             for (int i = 0; i < 9; i++) {
                 blockMenuPreset.addItem(i, ChestMenuUtils.getBackground(), ChestMenuUtils.getEmptyClickHandler());
             }
@@ -175,6 +175,7 @@ public class ElectricBlockBreaker extends SlimefunItem implements InventoryBlock
         new BlockMenuPreset(this.getId(), this.getItemName()) {
             @Override
             public void init() {
+                optOutOfHeaderItem();
                 for (int i = 0; i < 9; i++) {
                     addItem(i, ChestMenuUtils.getBackground(), ChestMenuUtils.getEmptyClickHandler());
                 }
@@ -264,7 +265,7 @@ public class ElectricBlockBreaker extends SlimefunItem implements InventoryBlock
                     int progress = cache.progress;
 
                     if (invMenu.hasViewer()) {
-                        invMenu.replaceExistingItem(4, new CustomItemStack(Material.GREEN_STAINED_GLASS_PANE, "&aOperating!",
+                        invMenu.replaceExistingItem(4, CustomItemStack.create(Material.GREEN_STAINED_GLASS_PANE, "&aOperating!",
                             "", "&bRate: " + this.rate + " ticks per Block", "&2Breaking block at rate: " + progress
                             + "/" + this.rate));
                     }

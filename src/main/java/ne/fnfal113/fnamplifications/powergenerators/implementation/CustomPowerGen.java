@@ -1,5 +1,6 @@
 package ne.fnfal113.fnamplifications.powergenerators.implementation;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -15,17 +16,17 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.util.Vector;
 
-import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
-import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
-import io.github.thebusybiscuit.slimefun4.core.attributes.EnergyNetProvider;
-import io.github.thebusybiscuit.slimefun4.core.attributes.HologramOwner;
-import io.github.thebusybiscuit.slimefun4.core.handlers.BlockBreakHandler;
-import io.github.thebusybiscuit.slimefun4.core.handlers.BlockPlaceHandler;
-import io.github.thebusybiscuit.slimefun4.core.handlers.BlockUseHandler;
-import io.github.thebusybiscuit.slimefun4.core.networks.energy.EnergyNetComponentType;
-import io.github.thebusybiscuit.slimefun4.utils.LoreBuilder;
+import io.github.thebusybiscuit.slimefun5.api.items.ItemGroup;
+import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItem;
+import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItemStack;
+import io.github.thebusybiscuit.slimefun5.api.recipes.RecipeType;
+import io.github.thebusybiscuit.slimefun5.core.attributes.EnergyNetProvider;
+import io.github.thebusybiscuit.slimefun5.core.attributes.HologramOwner;
+import io.github.thebusybiscuit.slimefun5.core.handlers.BlockBreakHandler;
+import io.github.thebusybiscuit.slimefun5.core.handlers.BlockPlaceHandler;
+import io.github.thebusybiscuit.slimefun5.core.handlers.BlockUseHandler;
+import io.github.thebusybiscuit.slimefun5.core.networks.energy.EnergyNetComponentType;
+import io.github.thebusybiscuit.slimefun5.utils.LoreBuilder;
 
 import me.mrCookieSlime.CSCoreLibPlugin.Configuration.Config;
 import me.mrCookieSlime.Slimefun.api.BlockStorage;
@@ -48,9 +49,8 @@ public class CustomPowerGen extends SlimefunItem implements HologramOwner, Energ
                 new BlockBreakHandler(false, false) {
                     @Override
                     public void onPlayerBreak(@Nonnull BlockBreakEvent e, @Nonnull ItemStack item, @Nonnull List<ItemStack> drops) {
-                        if (BlockStorage.getLocationInfo(e.getBlock().getLocation(), "holo_status").startsWith("true")) {
-                            removeHologram(e.getBlock());
-                        }
+                        removeHologram(e.getBlock());
+                        HOLO_CACHE.remove(e.getBlock().getLocation());
                     }
                 },
                 new BlockPlaceHandler(false) {
@@ -58,15 +58,15 @@ public class CustomPowerGen extends SlimefunItem implements HologramOwner, Energ
                     public void onPlayerPlace(@Nonnull BlockPlaceEvent e) {
                         BlockStorage.addBlockInfo(e.getBlock(), "holo_status", "true");
                         HOLO_CACHE.put(e.getBlock().getLocation(), true);
-                        toggleHologram();
                     }
                 });
     }
 
     public void setLore(ItemStack itemStack){
         ItemMeta meta = itemStack.getItemMeta();
+        if (meta == null) return;
         
-        List<String> lore = meta.getLore();
+        List<String> lore = meta.hasLore() && meta.getLore() != null ? meta.getLore() : new ArrayList<>();
         
         lore.add(Utils.colorTranslator(LoreBuilder.powerBuffer(FNAmplifications.getInstance().getConfigManager().getCustomConfig("power-xpansion-settings").getInt(this.getId() + "." + "storage"))));
         lore.add(Utils.colorTranslator("&8\u21E8 &e\u26A1 &7" + Utils.powerFormat.format(FNAmplifications.getInstance().getConfigManager().getCustomConfig("power-xpansion-settings").getInt(this.getId() + "." + "dayrate")) + " J/t" + " (Day Rate)"));
@@ -99,22 +99,21 @@ public class CustomPowerGen extends SlimefunItem implements HologramOwner, Energ
                 return;
             }
             Block block = e.getClickedBlock().get();
+            Location loc = block.getLocation();
 
-            String holoStatus = BlockStorage.getLocationInfo(block.getLocation(), "holo_status");
-            if(holoStatus == null) {
-                BlockStorage.addBlockInfo(block.getLocation(), "holo_status", "true");
-                HOLO_CACHE.put(block.getLocation(), true);
-                toggleHologram();
+            String holoStatus = BlockStorage.getLocationInfo(loc, "holo_status");
+            boolean isCurrentlyActive = holoStatus != null ? Boolean.parseBoolean(holoStatus) : HOLO_CACHE.getOrDefault(loc, true);
+
+            if (isCurrentlyActive) {
+                HOLO_CACHE.put(loc, false);
+                BlockStorage.addBlockInfo(loc, "holo_status", "false");
+                removeHologram(block);
             } else {
-                if(HOLO_CACHE.get(block.getLocation())){
-                    HOLO_CACHE.put(block.getLocation(), false);
-                    BlockStorage.addBlockInfo(block.getLocation(), "holo_status", "false");
-                    removeHologram(block);
-                } else {
-                    HOLO_CACHE.put(block.getLocation(), true);
-                    BlockStorage.addBlockInfo(block.getLocation(), "holo_status", "true");
-                    toggleHologram();
-                }
+                HOLO_CACHE.put(loc, true);
+                BlockStorage.addBlockInfo(loc, "holo_status", "true");
+                int charge = getCharge(loc);
+                String chargeStr = charge <= 0 ? Utils.colorTranslator("&8" + charge) : Utils.colorTranslator("&a" + charge);
+                updateHologram(block, Utils.colorTranslator("&eStored &a⚡: " + chargeStr));
             }
         };
     }
@@ -123,19 +122,19 @@ public class CustomPowerGen extends SlimefunItem implements HologramOwner, Energ
     public int getGeneratedOutput(@Nonnull Location l, @Nonnull Config data) {
         final int stored = getCharge(l);
 
-        // for first server boot up, cache location and hologram status per generator
-        if(!HOLO_CACHE.containsKey(l)){
-            if(BlockStorage.getLocationInfo(l, "holo_status") != null){
-                HOLO_CACHE.put(l, Boolean.parseBoolean(BlockStorage.getLocationInfo(l, "holo_status")));
+        boolean showHolo = HOLO_CACHE.computeIfAbsent(l, loc -> {
+            String status = BlockStorage.getLocationInfo(loc, "holo_status");
+            if (status != null) {
+                return Boolean.parseBoolean(status);
             } else {
-                BlockStorage.addBlockInfo(l, "holo_status", "true");
-                HOLO_CACHE.put(l, true);
+                BlockStorage.addBlockInfo(loc, "holo_status", "true");
+                return true;
             }
-        } else {
-            if(HOLO_CACHE.get(l)) {
-                String charge = getCharge(l) <= 0 ? Utils.colorTranslator("&8" + getCharge(l)) : Utils.colorTranslator("&a" + getCharge(l));
-                updateHologram(l.getBlock(), Utils.colorTranslator("&eStored &a⚡: " + charge));
-            }
+        });
+
+        if (showHolo) {
+            String charge = stored <= 0 ? Utils.colorTranslator("&8" + stored) : Utils.colorTranslator("&a" + stored);
+            updateHologram(l.getBlock(), Utils.colorTranslator("&eStored &a⚡: " + charge));
         }
 
         return stored < getCapacity() ? getGeneratingAmount(l.getBlock(), l.getWorld()) : 0;

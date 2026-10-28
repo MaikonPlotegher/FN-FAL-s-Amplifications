@@ -1,6 +1,6 @@
 package ne.fnfal113.fnamplifications.materialgenerators.listener;
 
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
+import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItem;
 import me.mrCookieSlime.Slimefun.api.BlockStorage;
 import ne.fnfal113.fnamplifications.materialgenerators.implementations.CustomMaterialGenerator;
 import ne.fnfal113.fnamplifications.materialgenerators.upgrades.abstracts.AbstractUpgrades;

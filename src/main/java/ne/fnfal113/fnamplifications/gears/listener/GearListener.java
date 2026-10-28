@@ -1,6 +1,6 @@
 package ne.fnfal113.fnamplifications.gears.listener;
 
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
+import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItem;
 
 import ne.fnfal113.fnamplifications.gears.abstracts.AbstractGears;
 

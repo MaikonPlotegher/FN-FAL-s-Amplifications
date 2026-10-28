@@ -1,15 +1,14 @@
 package ne.fnfal113.fnamplifications.machines.abstracts;
 
-import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
-import io.github.thebusybiscuit.slimefun4.api.items.ItemState;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
-import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
-import io.github.thebusybiscuit.slimefun4.core.attributes.EnergyNetComponent;
-import io.github.thebusybiscuit.slimefun4.core.networks.energy.EnergyNetComponentType;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.skins.PlayerHead;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.skins.PlayerSkin;
+import io.github.thebusybiscuit.slimefun5.api.items.ItemGroup;
+import io.github.thebusybiscuit.slimefun5.api.items.ItemState;
+import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItem;
+import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItemStack;
+import io.github.thebusybiscuit.slimefun5.api.recipes.RecipeType;
+import io.github.thebusybiscuit.slimefun5.core.attributes.EnergyNetComponent;
+import io.github.thebusybiscuit.slimefun5.core.networks.energy.EnergyNetComponentType;
+import io.github.thebusybiscuit.slimefun5.libraries.dough.items.CustomItemStack;
+import ne.fnfal113.fnamplifications.utils.Utils;
 
 import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.interfaces.InventoryBlock;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
@@ -26,54 +25,50 @@ import javax.annotation.Nullable;
 
 public abstract class AbstractJukeBox extends SlimefunItem implements InventoryBlock, EnergyNetComponent {
 
-    public CustomItemStack NOT_OPERATING = new CustomItemStack(Material.ORANGE_STAINED_GLASS_PANE,
+    public ItemStack NOT_OPERATING = CustomItemStack.create(Material.ORANGE_STAINED_GLASS_PANE,
             "&cNot Operating!",
             "&eClick Play Button"
     );
 
-    public CustomItemStack OPERATING = new CustomItemStack(Material.GREEN_STAINED_GLASS_PANE,
+    public ItemStack OPERATING = CustomItemStack.create(Material.GREEN_STAINED_GLASS_PANE,
             "&cOperating!"
     );
 
-    public CustomItemStack NO_POWER = new CustomItemStack(Material.RED_STAINED_GLASS_PANE,
+    public ItemStack NO_POWER = CustomItemStack.create(Material.RED_STAINED_GLASS_PANE,
             "&cNo Power!",
             "&ePower it up first!"
     );
 
-    public CustomItemStack NOT_RUNNING = new CustomItemStack(Material.YELLOW_STAINED_GLASS_PANE,
+    public ItemStack NOT_RUNNING = CustomItemStack.create(Material.YELLOW_STAINED_GLASS_PANE,
             "&cNot Running",
             "&eToggle it on first"
     );
 
-    public CustomItemStack TOGGLED_ON = new CustomItemStack(Material.BLUE_STAINED_GLASS_PANE,
+    public ItemStack TOGGLED_ON = CustomItemStack.create(Material.BLUE_STAINED_GLASS_PANE,
             "&dToggle:",
             "&eEnabled",
             "Click to change"
     );
 
-    public CustomItemStack TOGGLED_OFF = new CustomItemStack(Material.WHITE_STAINED_GLASS_PANE,
+    public ItemStack TOGGLED_OFF = CustomItemStack.create(Material.WHITE_STAINED_GLASS_PANE,
             "&dToggle:",
             "&eDisabled",
             "Click to change"
     );
 
-    public CustomItemStack PLAY = new CustomItemStack(PlayerHead.getItemStack(PlayerSkin.fromHashCode(
-            "cecd041f628c005a690fc6b8237e7311bb7c3b3aac10539fefe396a4c7c783e7")),
+    public ItemStack PLAY = CustomItemStack.create(Utils.getCustomHead("cecd041f628c005a690fc6b8237e7311bb7c3b3aac10539fefe396a4c7c783e7"),
             "&dStop"
     );
 
-    public CustomItemStack STOP = new CustomItemStack(PlayerHead.getItemStack(PlayerSkin.fromHashCode(
-            "fa8f6b131ef847d9160e516a6f44bfa932554d40c18a81796d766a5487b9f710")),
+    public ItemStack STOP = CustomItemStack.create(Utils.getCustomHead("fa8f6b131ef847d9160e516a6f44bfa932554d40c18a81796d766a5487b9f710"),
             "&dPlay"
     );
 
-    public CustomItemStack PREVIOUS = new CustomItemStack(PlayerHead.getItemStack(PlayerSkin.fromHashCode(
-            "32ff8aaa4b2ec30bc5541d41c8782199baa25ae6d854cda651f1599e654cfc79")),
+    public ItemStack PREVIOUS = CustomItemStack.create(Utils.getCustomHead("32ff8aaa4b2ec30bc5541d41c8782199baa25ae6d854cda651f1599e654cfc79"),
             "&dPrevious disc"
     );
 
-    public CustomItemStack NEXT = new CustomItemStack(PlayerHead.getItemStack(PlayerSkin.fromHashCode(
-            "aab95a8751aeaa3c671a8e90b83de76a0204f1be65752ac31be2f98feb64bf7f")),
+    public ItemStack NEXT = CustomItemStack.create(Utils.getCustomHead("aab95a8751aeaa3c671a8e90b83de76a0204f1be65752ac31be2f98feb64bf7f"),
             "&dNext disc"
     );
 

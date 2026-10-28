@@ -1,6 +1,6 @@
 package ne.fnfal113.fnamplifications.gems.implementation;
 
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
+import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItem;
 import ne.fnfal113.fnamplifications.gems.RetaliateGem;
 import ne.fnfal113.fnamplifications.gems.abstracts.AbstractGem;
 import ne.fnfal113.fnamplifications.utils.Keys;
@@ -89,7 +89,7 @@ public class GemUnbinderTask {
             NamespacedKey socketAmountKey = Keys.createKey(getItemInOffhand().getType().toString().toLowerCase() + "_socket_amount");
             NamespacedKey gemKey = Keys.createKey(gem.getId().toLowerCase());
 
-            List<String> lore = meta.getLore();
+            List<String> lore = meta.hasLore() && meta.getLore() != null ? meta.getLore() : new ArrayList<>();
 
             removeOtherPdc(pdc, gem);
 

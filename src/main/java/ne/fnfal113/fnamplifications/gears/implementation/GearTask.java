@@ -79,7 +79,7 @@ public class GearTask {
 
         progress.set(getStorageKey(), PersistentDataType.INTEGER, xpAmountIncremented);
 
-        List<String> lore = meta.getLore();
+        List<String> lore = meta.hasLore() && meta.getLore() != null ? meta.getLore() : new ArrayList<>();
 
         if (xpAmountIncremented >= 0) {
            updateArmour(armorLevel, xpAmountIncremented, maxXpReq, item, meta, lore);
@@ -93,6 +93,10 @@ public class GearTask {
     }
 
     public void updateArmour(int armorLevel, int xpAmountIncremented, int maxXpReq, ItemStack item, ItemMeta meta, List<String> lore) {
+        if (lore == null) return;
+        while (lore.size() < 10) {
+            lore.add("");
+        }
         lore.set(7, Utils.colorTranslator("&eLevel: ") + armorLevel);
         lore.set(8, Utils.colorTranslator("&eProgress:"));
         lore.set(9, Utils.colorTranslator("&7[&r" + getProgressBar(xpAmountIncremented, maxXpReq, 10, '■', ChatColor.YELLOW, ChatColor.GRAY) + "&7]"));

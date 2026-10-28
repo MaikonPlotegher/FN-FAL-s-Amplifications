@@ -2,8 +2,8 @@ package ne.fnfal113.fnamplifications;
 
 import javax.annotation.Nonnull;
 
-import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
-import io.github.bakedlibs.dough.updater.BlobBuildUpdater;
+import io.github.thebusybiscuit.slimefun5.implementation.Slimefun;
+import io.github.thebusybiscuit.slimefun5.api.SlimefunAddon;
 
 import ne.fnfal113.fnamplifications.config.ConfigManager;
 import ne.fnfal113.fnamplifications.gears.commands.GearCommands;
@@ -41,6 +41,9 @@ public final class FNAmplifications extends JavaPlugin implements SlimefunAddon 
         getConfig().options().copyDefaults();
         saveDefaultConfig();
 
+        // Register translations (Slimefun 5 ItemTranslationService)
+        Slimefun.getItemTranslationService().registerTranslations(this);
+
         // instantiate vault integration
         setVaultIntegration(this);
 
@@ -49,10 +52,6 @@ public final class FNAmplifications extends JavaPlugin implements SlimefunAddon 
 
         registerCommands();
         getServer().getScheduler().runTaskTimerAsynchronously(this, new ArmorEquipRunnable(), 0L, getConfig().getInt("armor-update-period") * 20L);
-
-        if(getConfig().getBoolean("auto-update", true) && getDescription().getVersion().startsWith("Dev - ")) {
-            new BlobBuildUpdater(this, getFile(), "FNAmplifications").start();
-        }
     }
 
     @Override

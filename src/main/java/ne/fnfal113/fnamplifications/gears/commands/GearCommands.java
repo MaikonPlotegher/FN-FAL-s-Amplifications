@@ -1,6 +1,6 @@
 package ne.fnfal113.fnamplifications.gears.commands;
 
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
+import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItem;
 
 import ne.fnfal113.fnamplifications.gears.abstracts.AbstractGears;
 import ne.fnfal113.fnamplifications.utils.Utils;
@@ -56,7 +56,7 @@ public class GearCommands implements TabExecutor {
                     if (itemStack != null) {
                         SlimefunItem item = SlimefunItem.getByItem(itemStack);
                         ItemMeta meta = itemStack.getItemMeta();
-                        List<String> lore = meta.getLore();
+                        List<String> lore = meta.hasLore() && meta.getLore() != null ? meta.getLore() : new ArrayList<>();
                         PersistentDataContainer progress = meta.getPersistentDataContainer();
 
                         if(item instanceof AbstractGears) {

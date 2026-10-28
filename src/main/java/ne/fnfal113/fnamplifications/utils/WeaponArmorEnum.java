@@ -1,7 +1,7 @@
 package ne.fnfal113.fnamplifications.utils;
 
-import io.github.thebusybiscuit.slimefun4.api.MinecraftVersion;
-import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
+import io.github.thebusybiscuit.slimefun5.api.MinecraftVersion;
+import io.github.thebusybiscuit.slimefun5.implementation.Slimefun;
 import org.bukkit.Material;
 
 /**

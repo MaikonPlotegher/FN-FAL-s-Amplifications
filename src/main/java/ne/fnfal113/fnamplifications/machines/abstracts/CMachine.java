@@ -1,28 +1,31 @@
 package ne.fnfal113.fnamplifications.machines.abstracts;
 
-import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
-import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
-import io.github.thebusybiscuit.slimefun4.api.items.ItemState;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
-import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
+import io.github.thebusybiscuit.slimefun5.api.SlimefunAddon;
+import io.github.thebusybiscuit.slimefun5.api.items.ItemGroup;
+import io.github.thebusybiscuit.slimefun5.api.items.ItemState;
+import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItem;
+import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItemStack;
+import io.github.thebusybiscuit.slimefun5.api.recipes.RecipeType;
 import me.mrCookieSlime.Slimefun.api.BlockStorage;
 
-import io.github.thebusybiscuit.slimefun4.core.attributes.EnergyNetComponent;
-import io.github.thebusybiscuit.slimefun4.core.attributes.MachineProcessHolder;
-import io.github.thebusybiscuit.slimefun4.core.handlers.BlockBreakHandler;
-import io.github.thebusybiscuit.slimefun4.core.machines.MachineProcessor;
-import io.github.thebusybiscuit.slimefun4.core.networks.energy.EnergyNetComponentType;
+import io.github.thebusybiscuit.slimefun5.core.attributes.EnergyNetComponent;
+import io.github.thebusybiscuit.slimefun5.core.attributes.MachineProcessHolder;
+import io.github.thebusybiscuit.slimefun5.core.handlers.BlockBreakHandler;
+import io.github.thebusybiscuit.slimefun5.core.machines.MachineProcessor;
+import io.github.thebusybiscuit.slimefun5.core.networks.energy.EnergyNetComponentType;
 
-import io.github.thebusybiscuit.slimefun4.implementation.handlers.SimpleBlockBreakHandler;
-import io.github.thebusybiscuit.slimefun4.implementation.operations.CraftingOperation;
+import io.github.thebusybiscuit.slimefun5.implementation.handlers.SimpleBlockBreakHandler;
+import io.github.thebusybiscuit.slimefun5.implementation.operations.CraftingOperation;
 
-import io.github.thebusybiscuit.slimefun4.libraries.dough.inventory.InvUtils;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
+import io.github.thebusybiscuit.slimefun5.libraries.dough.inventory.InvUtils;
+import io.github.thebusybiscuit.slimefun5.libraries.dough.items.CustomItemStack;
+import io.github.thebusybiscuit.slimefun5.libraries.dough.protection.Interaction;
+import io.github.thebusybiscuit.slimefun5.implementation.Slimefun;
+import me.mrCookieSlime.Slimefun.api.item_transport.ItemTransportFlow;
 
-import io.github.thebusybiscuit.slimefun4.utils.ChestMenuUtils;
-import io.github.thebusybiscuit.slimefun4.utils.SlimefunUtils;
-import io.github.thebusybiscuit.slimefun4.utils.itemstack.ItemStackWrapper;
+import io.github.thebusybiscuit.slimefun5.utils.ChestMenuUtils;
+import io.github.thebusybiscuit.slimefun5.utils.SlimefunUtils;
+import io.github.thebusybiscuit.slimefun5.utils.itemstack.ItemStackWrapper;
 
 import me.mrCookieSlime.CSCoreLibPlugin.Configuration.Config;
 
@@ -66,7 +69,24 @@ public abstract class CMachine extends SlimefunItem implements InventoryBlock, E
         super(itemGroup, item, recipeType, recipe);
 
         processor.setProgressBar(getProgressBar());
-        createPreset(this, getInventoryTitle(), this::constructMenu);
+        new BlockMenuPreset(getId(), getInventoryTitle()) {
+            @Override
+            public void init() {
+                optOutOfHeaderItem();
+                constructMenu(this);
+            }
+
+            @Override
+            public boolean canOpen(@Nonnull Block block, @Nonnull Player player) {
+                return player.hasPermission("slimefun.inventory.bypass")
+                    || Slimefun.getProtectionManager().hasPermission(player, block.getLocation(), Interaction.INTERACT_BLOCK);
+            }
+
+            @Override
+            public int[] getSlotsAccessedByItemTransport(ItemTransportFlow flow) {
+                return flow == ItemTransportFlow.INSERT ? getInputSlots() : getOutputSlots();
+            }
+        };
 
         addItemHandler(onBlockBreak());
     }
@@ -123,14 +143,14 @@ public abstract class CMachine extends SlimefunItem implements InventoryBlock, E
         }
 
         for (int i : getInputBorder()) {
-            preset.addItem(i, new CustomItemStack(Material.PINK_STAINED_GLASS_PANE, " "), ChestMenuUtils.getEmptyClickHandler());
+            preset.addItem(i, CustomItemStack.create(Material.PINK_STAINED_GLASS_PANE, " "), ChestMenuUtils.getEmptyClickHandler());
         }
 
         for (int i : getOutputBorder()) {
-            preset.addItem(i, new CustomItemStack(Material.GREEN_STAINED_GLASS_PANE, " "), ChestMenuUtils.getEmptyClickHandler());
+            preset.addItem(i, CustomItemStack.create(Material.GREEN_STAINED_GLASS_PANE, " "), ChestMenuUtils.getEmptyClickHandler());
         }
 
-        preset.addItem(getProgressBarSlot(), new CustomItemStack(Material.BLACK_STAINED_GLASS_PANE, " "), ChestMenuUtils.getEmptyClickHandler());
+        preset.addItem(getProgressBarSlot(), CustomItemStack.create(Material.BLACK_STAINED_GLASS_PANE, " "), ChestMenuUtils.getEmptyClickHandler());
 
         for (int i : getOutputSlots()) {
             preset.addMenuClickHandler(i, new ChestMenu.AdvancedMenuClickHandler() {
@@ -278,6 +298,18 @@ public abstract class CMachine extends SlimefunItem implements InventoryBlock, E
         registerRecipe(new MachineRecipe(seconds, new ItemStack[] { input }, new ItemStack[] { output }));
     }
 
+    public void registerRecipe(int seconds, SlimefunItemStack[] input, SlimefunItemStack[] output) {
+        ItemStack[] in = new ItemStack[input.length];
+        for (int i = 0; i < input.length; i++) in[i] = input[i] == null ? null : input[i].item();
+        ItemStack[] out = new ItemStack[output.length];
+        for (int i = 0; i < output.length; i++) out[i] = output[i] == null ? null : output[i].item();
+        registerRecipe(seconds, in, out);
+    }
+
+    public void registerRecipe(int seconds, SlimefunItemStack input, SlimefunItemStack output) {
+        registerRecipe(seconds, input.item(), output.item());
+    }
+
     @Override
     public void preRegister() {
         addItemHandler(new BlockTicker() {
@@ -305,7 +337,7 @@ public abstract class CMachine extends SlimefunItem implements InventoryBlock, E
                     processor.updateProgressBar(inv, 22, currentOperation);
                     currentOperation.addProgress(1);
                 } else {
-                    inv.replaceExistingItem(22, new CustomItemStack(Material.BLACK_STAINED_GLASS_PANE, " "));
+                    inv.replaceExistingItem(22, CustomItemStack.create(Material.BLACK_STAINED_GLASS_PANE, " "));
 
                     for (ItemStack output : currentOperation.getResults()) {
                         inv.pushItem(output.clone(), getOutputSlots());

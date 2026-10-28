@@ -1,0 +1,1870 @@
+FN_POWER_XPANSION_POWER_R1:
+  name: "&d&lFN Power Xpansion R1"
+  description:
+    - "&9This works at Night!"
+    - "&9Place and right click"
+    - "&9the block for power info"
+    - ""
+FN_POWER_XPANSION_POWER_R2:
+  name: "&d&lFN Power Xpansion R2"
+  description:
+    - "&9This works at Night!"
+    - "&9Place and right click"
+    - "&9the block for power info"
+    - ""
+FN_POWER_XPANSION_POWER_R3:
+  name: "&d&lFN Power Xpansion R3"
+  description:
+    - "&9This works at Night!"
+    - "&9Place and right click"
+    - "&9the block for power info"
+    - ""
+FN_POWER_XPANSION_POWER_R4:
+  name: "&d&lFN Power Xpansion R4"
+  description:
+    - "&9This works at Night!"
+    - "&9Place and right click"
+    - "&9the block for power info"
+    - ""
+FN_POWER_XPANSION_POWER_R5:
+  name: "&d&lFN Power Xpansion R5"
+  description:
+    - "&9This works at Night!"
+    - "&9Place and right click"
+    - "&9the block for power info"
+    - ""
+FN_POWER_XPANSION_POWER_R6:
+  name: "&d&lFN Power Xpansion R6"
+  description:
+    - "&9This works at Night!"
+    - "&9Place and right click"
+    - "&9the block for power info"
+    - ""
+FN_POWER_XPANSION_POWER_R7:
+  name: "&d&lFN Power Xpansion R7"
+  description:
+    - "&9This works at Night!"
+    - "&9Place and right click"
+    - "&9the block for power info"
+    - ""
+FN_POWER_XPANSION_POWER_R8:
+  name: "&d&lFN Power Xpansion R8"
+  description:
+    - "&9This works at Night!"
+    - "&9Place and right click"
+    - "&9the block for power info"
+    - ""
+FN_POWER_XPANSION_POWER_R9:
+  name: "&d&lFN Power Xpansion R9"
+  description:
+    - "&9This works at Night!"
+    - "&9Place and right click"
+    - "&9the block for power info"
+    - ""
+FN_POWER_XPANSION_POWER_R10:
+  name: "&d&lFN Power Xpansion R10"
+  description:
+    - "&9This works at Night!"
+    - "&9Place and right click"
+    - "&9the block for power info"
+    - ""
+FN_POWER_XPANSION_POWER_R11:
+  name: "&d&lFN Power Xpansion R11"
+  description:
+    - "&9This works at Night!"
+    - "&9Place and right click"
+    - "&9the block for power info"
+    - ""
+FN_POWER_XPANSION_POWER_R12:
+  name: "&d&lFN Power Xpansion R12"
+  description:
+    - "&9This works at Night!"
+    - "&9Place and right click"
+    - "&9the block for power info"
+    - ""
+FMG_GENERATOR_MULTIBLOCK:
+  name: "&9Generator multiblock"
+  description:
+    - ""
+    - "&dBuild any of this addon's"
+    - "&dgenerators like this."
+    - "&aThey will only output to a chest placed above"
+    - "&athe actual generators."
+FMG_GENERATOR_CLAY_BROKEN:
+  name: "&3FN Clay Generator &8(Broken)"
+  description:
+    - "&8Needs to be repaired"
+    - ""
+    - "&d&oFN Material Generators"
+FMG_GENERATOR_CLAY:
+  name: "&3FN Clay Generator"
+  description:
+    - "&6Generates clay at a certain rate"
+    - "&6Right click the block for info"
+    - ""
+    - "&6Tickrate: &6ticks"
+    - ""
+    - "&cWarning:"
+    - "&fBreaking the block will drop"
+    - "&fthe broken type"
+    - ""
+    - "&d&oFN Material Generators"
+FMG_GENERATOR_TERRACOTTA_BROKEN:
+  name: "&4FN Terracotta Generator &8(Broken)"
+  description:
+    - "&8Needs to be repaired"
+    - ""
+    - "&d&oFN Material Generators"
+FMG_GENERATOR_TERRACOTTA:
+  name: "&4FN Terracotta Generator"
+  description:
+    - "&6Generates terracotta at a certain rate"
+    - "&6Right click the block for info"
+    - ""
+    - "&6Tickrate: &6ticks"
+    - ""
+    - "&cWarning:"
+    - "&fBreaking the block will drop"
+    - "&fthe broken type"
+    - ""
+    - "&d&oFN Material Generators"
+FMG_GENERATOR_BONE_BROKEN:
+  name: "&fFN Bone Generator &8(Broken)"
+  description:
+    - "&8Needs to be repaired"
+    - ""
+    - "&d&oFN Material Generators"
+FMG_GENERATOR_BONE:
+  name: "&fFN Bone Generator"
+  description:
+    - "&6Generates bone at a certain rate"
+    - "&6Right click the block for info"
+    - ""
+    - "&6Tickrate: &6ticks"
+    - ""
+    - "&cWarning:"
+    - "&fBreaking the block will drop"
+    - "&fthe broken type"
+    - ""
+    - "&d&oFN Material Generators"
+FMG_GENERATOR_DIAMOND_BROKEN:
+  name: "&bFN Diamond Generator &8(Broken)"
+  description:
+    - "&8Needs to be repaired"
+    - ""
+    - "&d&oFN Material Generators"
+FMG_GENERATOR_DIAMOND:
+  name: "&bFN Diamond Generator"
+  description:
+    - "&6Generates diamond at a certain rate"
+    - "&6Right click the block for info"
+    - ""
+    - "&6Tickrate: &6ticks"
+    - ""
+    - "&cWarning:"
+    - "&fBreaking the block will drop"
+    - "&fthe broken type"
+    - ""
+    - "&d&oFN Material Generators"
+FMG_GENERATOR_EMERALD_BROKEN:
+  name: "&aFN Emerald Generator &8(Broken)"
+  description:
+    - "&8Needs to be repaired"
+    - ""
+    - "&d&oFN Material Generators"
+FMG_GENERATOR_EMERALD:
+  name: "&aFN Emerald Generator"
+  description:
+    - "&6Generates emerald at a certain rate"
+    - "&6Right click the block for info"
+    - ""
+    - "&6Tickrate: &6ticks"
+    - ""
+    - "&cWarning:"
+    - "&fBreaking the block will drop"
+    - "&fthe broken type"
+    - ""
+    - "&d&oFN Material Generators"
+FMG_GENERATOR_DIRT_BROKEN:
+  name: "&fFN Dirt Generator &8(Broken)"
+  description:
+    - "&8Needs to be repaired"
+    - ""
+    - "&d&oFN Material Generators"
+FMG_GENERATOR_DIRT:
+  name: "&fFN Dirt Generator"
+  description:
+    - "&6Generates dirt at a certain rate"
+    - "&6Right click the block for info"
+    - ""
+    - "&6Tickrate: &6ticks"
+    - ""
+    - "&cWarning:"
+    - "&fBreaking the block will drop"
+    - "&fthe broken type"
+    - ""
+    - "&d&oFN Material Generators"
+FMG_GENERATOR_HONEYCOMB_BROKEN:
+  name: "&6FN Honey Comb Generator &8(Broken)"
+  description:
+    - "&8Needs to be repaired"
+    - ""
+    - "&d&oFN Material Generators"
+FMG_GENERATOR_HONEYCOMB:
+  name: "&6FN Honey Comb Generator"
+  description:
+    - "&6Generates honey comb at a certain rate"
+    - "&6Right click the block for info"
+    - ""
+    - "&6Tickrate: &6ticks"
+    - ""
+    - "&cWarning:"
+    - "&fBreaking the block will drop"
+    - "&fthe broken type"
+    - ""
+    - "&d&oFN Material Generators"
+FMG_GENERATOR_QUARTZ_BROKEN:
+  name: "&fFN Quartz Generator &8(Broken)"
+  description:
+    - "&8Needs to be repaired"
+    - ""
+    - "&d&oFN Material Generators"
+FMG_GENERATOR_QUARTZ:
+  name: "&fFN Quartz Generator"
+  description:
+    - "&6Generates quartz at a certain rate"
+    - "&6Right click the block for info"
+    - ""
+    - "&6Tickrate: &6ticks"
+    - ""
+    - "&cWarning:"
+    - "&fBreaking the block will drop"
+    - "&fthe broken type"
+    - ""
+    - "&d&oFN Material Generators"
+FMG_GENERATOR_AMETHYST_BROKEN:
+  name: "&dFN Amethyst Cluster Generator &8(Broken)"
+  description:
+    - "&8Needs to be repaired"
+    - ""
+    - "&d&oFN Material Generators"
+FMG_GENERATOR_AMETHYST:
+  name: "&dFN Amethyst Cluster Generator"
+  description:
+    - "&6Generates amethyst cluster at a certain rate"
+    - "&6Right click the block for info"
+    - ""
+    - "&6Tickrate: &6ticks"
+    - ""
+    - "&cWarning:"
+    - "&fBreaking the block will drop"
+    - "&fthe broken type"
+    - ""
+    - "&d&oFN Material Generators"
+FMG_GENERATOR_WARPED_BROKEN:
+  name: "&4FN Warped Nylium Generator &8(Broken)"
+  description:
+    - "&8Needs to be repaired"
+    - ""
+    - "&d&oFN Material Generators"
+FMG_GENERATOR_WARPED:
+  name: "&4FN Warped Nylium Generator"
+  description:
+    - "&6Generates warped nylium at a certain rate"
+    - "&6Right click the block for info"
+    - ""
+    - "&6Tickrate: &6ticks"
+    - ""
+    - "&cWarning:"
+    - "&fBreaking the block will drop"
+    - "&fthe broken type"
+    - ""
+    - "&d&oFN Material Generators"
+FN_MAT_GEN_UPGRADES_REPAIR_ITEM:
+  name: "&fFN Mat Gen Repair Item"
+  description:
+    - "&6Repairs or add durability"
+    - ""
+    - "&e+20 durability"
+    - ""
+    - "&aRight click on a material generator"
+    - "&d&oFN Material Generators Upgrades"
+FN_MAT_GEN_UPGRADES_FAST_PRODUCE:
+  name: "&fFN Mat Gen Fast Produce"
+  description:
+    - "&6Faster production"
+    - ""
+    - "&e+1.75x Mat gen speed for 30 minutes"
+    - ""
+    - "&aRight click on a material generator"
+    - "&d&oFN Material Generators Upgrades"
+FN_FAL_GENERATOR_TIER1:
+  name: "&dFN Solar Generator Tier I"
+  description:
+    - ""
+    - "&eA solar generator for those who"
+    - "&eneeds power during day only"
+    - ""
+    - ""
+FN_FAL_GENERATOR_TIER2:
+  name: "&dFN Solar Generator Tier II"
+  description:
+    - ""
+    - "&eA solar generator for those who"
+    - "&eneeds power during day only"
+    - ""
+    - ""
+FN_FAL_GENERATOR_TIER3:
+  name: "&dFN Solar Generator Tier III"
+  description:
+    - ""
+    - "&eA solar generator for those who"
+    - "&eneeds power during day only"
+    - ""
+    - ""
+FN_FAL_GENERATOR_TIER4:
+  name: "&dFN Solar Generator Tier IV"
+  description:
+    - ""
+    - "&eA solar generator for those who"
+    - "&eneeds power during day only"
+    - ""
+    - ""
+FN_FAL_GENERATOR_TIER5:
+  name: "&dFN Solar Generator Tier V"
+  description:
+    - ""
+    - "&eA solar generator for those who"
+    - "&eneeds power during day only"
+    - ""
+    - ""
+FN_FAL_GENERATOR_TIER6:
+  name: "&dFN Solar Generator Tier VI"
+  description:
+    - ""
+    - "&eA solar generator for those who"
+    - "&eneeds power during day only"
+    - ""
+    - ""
+FN_FAL_GENERATOR_TIER7:
+  name: "&dFN Solar Generator Tier VII"
+  description:
+    - ""
+    - "&eA solar generator for those who"
+    - "&eneeds power during day only"
+    - ""
+    - ""
+FN_FAL_GENERATOR_TIER8:
+  name: "&dFN Solar Generator Tier VIII"
+  description:
+    - ""
+    - "&eA solar generator for those who"
+    - "&eneeds power during day only"
+    - ""
+    - ""
+FN_FAL_TRANSFORMER_1:
+  name: "&dFN Electric Transformer I"
+  description:
+    - ""
+    - "&eA machinery that can transform"
+    - "&evarious items to other forms"
+    - ""
+    - "&d&oFN Machinery"
+    - ""
+    - "1"
+    - "256"
+FN_FAL_TRANSFORMER_2:
+  name: "&dFN Electric Transformer II"
+  description:
+    - ""
+    - "&eA machinery that can transform"
+    - "&evarious items to other forms"
+    - ""
+    - "&d&oFN Machinery"
+    - ""
+    - "2"
+    - "384"
+FN_FAL_TRANSFORMER_3:
+  name: "&dFN Electric Transformer III"
+  description:
+    - ""
+    - "&eA machinery that can transform"
+    - "&evarious items to other forms"
+    - ""
+    - "&d&oFN Machinery"
+    - ""
+    - "4"
+    - "768"
+FN_FAL_COMPRESSOR_1:
+  name: "&dFN Electric Compressor I"
+  description:
+    - ""
+    - "&eA machinery that can compress"
+    - "&eitems to form a biological item"
+    - ""
+    - "&d&oFN Machinery"
+    - ""
+    - "1"
+    - "128"
+FN_FAL_COMPRESSOR_2:
+  name: "&dFN Electric Compressor II"
+  description:
+    - ""
+    - "&eA machinery that can compress"
+    - "&eitems to form a biological item"
+    - ""
+    - "&d&oFN Machinery"
+    - ""
+    - "2"
+    - "256"
+FN_FAL_COMPRESSOR_3:
+  name: "&dFN Electric Compressor III"
+  description:
+    - ""
+    - "&eA machinery that can compress"
+    - "&eitems to form a biological item"
+    - ""
+    - "&d&oFN Machinery"
+    - ""
+    - "4"
+    - "512"
+FN_FAL_CONDENSER_1:
+  name: "&dFN Electric Ingot Condenser I"
+  description:
+    - ""
+    - "&eA machinery that can condense two"
+    - "&eingots or items to one biological ingot"
+    - ""
+    - "&d&oFN Machinery"
+    - ""
+    - "1"
+    - "256"
+FN_FAL_CONDENSER_2:
+  name: "&dFN Electric Ingot Condenser II"
+  description:
+    - ""
+    - "&eA machinery that can condense two"
+    - "&eingots or items to one biological ingot"
+    - ""
+    - "&d&oFN Machinery"
+    - ""
+    - "2"
+    - "384"
+FN_FAL_CONDENSER_3:
+  name: "&dFN Electric Ingot Condenser III"
+  description:
+    - ""
+    - "&eA machinery that can condense two"
+    - "&eingots or items to one biological ingot"
+    - ""
+    - "&d&oFN Machinery"
+    - ""
+    - "4"
+    - "768"
+FN_FAL_RECYCLER_1:
+  name: "&dFN Electric Recycler I"
+  description:
+    - ""
+    - "&eA machinery that can recycle"
+    - "&eitems to that of in lower form"
+    - ""
+    - "&d&oFN Machinery"
+    - ""
+    - "1"
+    - "168"
+FN_FAL_RECYCLER_2:
+  name: "&dFN Electric Recycler II"
+  description:
+    - ""
+    - "&eA machinery that can recycle"
+    - "&eitems to that of in lower form"
+    - ""
+    - "&d&oFN Machinery"
+    - ""
+    - "2"
+    - "336"
+FN_FAL_RECYCLER_3:
+  name: "&dFN Electric Recycler III"
+  description:
+    - ""
+    - "&eA machinery that can recycle"
+    - "&eitems to that of in lower form"
+    - ""
+    - "&d&oFN Machinery"
+    - ""
+    - "4"
+    - "672"
+FN_FAL_DOWNGRADER:
+  name: "&dFN Electric Machine Downgrader"
+  description:
+    - ""
+    - "&eA machinery that can downgrade SF"
+    - "&emachines, great machine for mistakenly"
+    - "&ecrafted machines or want to downgrade"
+    - "&eextra machines"
+    - ""
+    - "&e- Machine gui must be opened in order"
+    - "  &efor scraps to drop by chance"
+    - "&e- 25% chance to get 1 scrap/downgrade"
+    - ""
+    - "&d&oFN Machinery"
+    - ""
+    - "4"
+    - "1500"
+FN_MACHINERY_MACHINE_PART:
+  name: "&dMachine Part"
+  description:
+    - "&fEssential Part for FN Machinery"
+    - ""
+    - "&d&oFN Machinery Items"
+FN_MACHINERY_MACHINE_PART_SCRAP:
+  name: "&dMachine Part"
+  description:
+    - "&fCraft using metal scraps"
+FN_MACHINERY_COMPONENT_PART:
+  name: "&dComponent Part"
+  description:
+    - "&fEssential Part for FN Machinery"
+    - ""
+    - "&d&oFN Machinery Items"
+FN_MACHINERY_COMPONENT_PART_SCRAP:
+  name: "&dComponent Part"
+  description:
+    - "&fCraft using metal scraps"
+FN_MACHINERY_MOTOR_SWITCH:
+  name: "&dMotor Switch"
+  description:
+    - "&fEssential Part for FN Machinery"
+    - ""
+    - "&d&oFN Machinery Items"
+FN_MACHINERY_MOTOR_SWITCH_SCRAP:
+  name: "&dMotor Switch"
+  description:
+    - "&fCraft using metal scraps"
+FN_MACHINERY_POWER_COMPONENT:
+  name: "&dPower Component"
+  description:
+    - "&fEssential Part for FN Machinery"
+    - "&fand Power Xpansion"
+    - ""
+    - "&d&oFN Machinery Items"
+FN_MACHINERY_POWER_COMPONENT_SCRAP:
+  name: "&dPower Component"
+  description:
+    - "&fCraft using metal scraps"
+FN_MACHINERY_GEAR_PART:
+  name: "&dGear Part"
+  description:
+    - "&fEssential Part for FN Machinery"
+    - "&fand Power Xpansion"
+    - ""
+    - "&d&oFN Machinery Items"
+FN_MACHINERY_GEAR_PART_SCRAP:
+  name: "&dGear Part"
+  description:
+    - "&fCraft using metal scraps"
+FN_MACHINERY_THREAD_PART:
+  name: "&dThread Part"
+  description:
+    - "&fEssential Part for FN Machinery"
+    - ""
+    - "&d&oFN Machinery Items"
+FN_MACHINERY_THREAD_PART_SCRAP:
+  name: "&dThread Part"
+  description:
+    - "&fCraft using metal scraps"
+FN_MACHINERY_COMPRESSOR_PART:
+  name: "&dCompressor Part"
+  description:
+    - "&fEssential Part for FN Machinery"
+    - ""
+    - "&d&oFN Machinery Items"
+FN_MACHINERY_CONDENSER_PART:
+  name: "&dCondenser Part"
+  description:
+    - "&fEssential Part for FN Machinery"
+    - ""
+    - "&d&oFN Machinery Items"
+FN_MACHINERY_RECYCLER_PART:
+  name: "&dRecycler Part"
+  description:
+    - "&fEssential Part for FN Machinery"
+    - ""
+    - "&d&oFN Machinery Items"
+FN_MACHINERY_DOWNGRADER_PART:
+  name: "&dDowngrader Part"
+  description:
+    - "&fEssential Part for FN Machinery"
+    - ""
+    - "&d&oFN Machinery Items"
+FN_MACHINERY_FUNNEL_PART:
+  name: "&dFunnel Part"
+  description:
+    - "&fEssential Part for FN Machinery"
+    - ""
+    - "&d&oFN Machinery Items"
+FN_MACHINERY_FUNNEL_PART_SCRAP:
+  name: "&dFunnel Part"
+  description:
+    - "&fCraft using metal scraps"
+FN_MACHINERY_DIAMOND_PLATING:
+  name: "&dDiamond Plating"
+  description:
+    - "&fEssential Part for FN Machinery"
+    - "&fand Power Xpansion"
+    - ""
+    - "&d&oFN Machinery Items"
+FN_MACHINERY_ALUMINUM_PLATING:
+  name: "&dAluminum Plating"
+  description:
+    - "&fEssential Part for FN Machinery"
+    - "&fand Power Xpansion"
+    - ""
+    - "&d&oFN Machinery Items"
+FN_MACHINERY_GOLD_PLATING:
+  name: "&dGold Plating"
+  description:
+    - "&fEssential Part for FN Machinery"
+    - "&fand Power Xpansion"
+    - ""
+    - "&d&oFN Machinery Items"
+FN_MACHINERY_BRASS_PLATING:
+  name: "&dBrass Plating"
+  description:
+    - "&fEssential Part for FN Machinery"
+    - "&fand Power Xpansion"
+    - ""
+    - "&d&oFN Machinery Items"
+FN_MACHINERY_REINFORCED_CASING:
+  name: "&dReinforced Casing"
+  description:
+    - "&fEssential Part for FN Machinery"
+    - "&fand Power Xpansion"
+    - ""
+    - "&d&oFN Machinery Items"
+FN_MAGICAL_ITEMS_UNBIND_RUNE:
+  name: "&6Unbind Rune"
+  description:
+    - "&fA magical rune from psijic time"
+    - ""
+    - "&d&oFN Magical Items"
+FN_MAGICAL_ITEMS_SPIRAL_FIRE_RUNE:
+  name: "&cSpiral Fire Rune"
+  description:
+    - "&fA heart full of fire is fire"
+    - "&fthat spirals within this rune"
+    - ""
+    - "&d&oFN Magical Items"
+FN_MAGICAL_ITEMS_SPIRIT_RUNE:
+  name: "&fSpirit Rune"
+  description:
+    - "&fSpirit thy come for"
+    - "&fI redeem thy soul"
+    - ""
+    - "&d&oFN Magical Items"
+FN_MAGICAL_ITEMS_PESTILENCE_RUNE:
+  name: "&aPestilence Rune"
+  description:
+    - "&fA rune from the black death"
+    - "&fperiod that holds a deadly sin"
+    - ""
+    - "&d&oFN Magical Items"
+FN_MAGICAL_ITEMS_SPARKLING_RUNE:
+  name: "&eSparkling Rune"
+  description:
+    - "&fToo bright and too flashy"
+    - "&ffor this rune is too deadly"
+    - ""
+    - "&d&oFN Magical Items"
+FN_MAGICAL_ITEMS_CLOUD_RUNE:
+  name: "&3Cloud Rune"
+  description:
+    - "&fUp in the skies is where"
+    - "&fthe clouds lies"
+    - ""
+    - "&d&oFN Magical Items"
+FN_MAGICAL_ITEMS_ICE_RUNE:
+  name: "&bIce Rune"
+  description:
+    - "&fThe rune full of chill"
+    - "&fbut can you stay still"
+    - ""
+    - "&d&oFN Magical Items"
+FN_MAGICAL_ITEMS_POWER_RUNE:
+  name: "&9Power Rune"
+  description:
+    - "&fThe power from this rune"
+    - "&fcan do dangerous things"
+    - ""
+    - "&d&oFN Magical Items"
+FN_MAGICAL_ITEMS_LINGER_RUNE:
+  name: "&2Linger Rune"
+  description:
+    - "&fIt lingers from top to"
+    - "&fbottom and soon the middle"
+    - ""
+    - "&d&oFN Magical Items"
+FN_MAGICAL_ITEMS_AGILITY_RUNE:
+  name: "&eAgility Rune"
+  description:
+    - "&fFaster means better but"
+    - "&fdoes it matter"
+    - ""
+    - "&d&oFN Magical Items"
+FN_MAGICAL_ITEMS_INTELLECT_RUNE:
+  name: "&9Intellect Rune"
+  description:
+    - "&fVery useful rune in the"
+    - "&ftime of desperation"
+    - ""
+    - "&d&oFN Magical Items"
+FN_MAGICAL_ITEMS_HEART_RUNE:
+  name: "&dHeart Rune"
+  description:
+    - "&fRejuvenate through this rune"
+    - "&fas you sense the aura inside"
+    - ""
+    - "&d&oFN Magical Items"
+FN_MACHINERY_BASIC_MACHINE_BLOCK:
+  name: "&dBasic Machine Block"
+  description:
+    - "&fEssential Part for FN Machinery"
+    - "&fand Power Xpansion"
+    - ""
+    - "&d&oFN Machinery Items"
+FN_MACHINERY_HIGHTECH_MACHINE_BLOCK:
+  name: "&dHigh Tech Machine Block"
+  description:
+    - "&fEssential Part for FN Machinery"
+    - "&fand Power Xpansion"
+    - ""
+    - "&d&oFN Machinery Items"
+FN_ASSEMBLY_STATION:
+  name: "&dFN Assembly Station"
+  description: []
+FN_SCRAP_RECYCLER:
+  name: "&dFN Scrap Recycler"
+  description: []
+FN_METAL_SCRAPS:
+  name: "&dMetal Scrap"
+  description:
+    - "&fLeftover from downgrading machines"
+    - "&fcan be used to craft FN Machinery Items"
+    - ""
+    - "&d&oFN Machinery Items"
+FN_BLOCK_BREAKER_I:
+  name: "&4Electric Block Breaker I"
+  description:
+    - ""
+    - "&6Place block in front"
+    - "&6of the dispenser to break"
+    - "&d(Vanilla)"
+    - ""
+    - "&eRate: &eticks"
+    - ""
+    - "&d&oFN Machinery"
+    - ""
+    - "512"
+    - "&8⇨ &e⚡ &732 J/t"
+FN_BLOCK_BREAKER_II:
+  name: "&4Electric Block Breaker II"
+  description:
+    - ""
+    - "&6Place block in front"
+    - "&6of the dispenser to break"
+    - "&d(Vanilla)"
+    - ""
+    - "&eRate: &eticks"
+    - ""
+    - "&d&oFN Machinery"
+    - ""
+    - "1024"
+    - "&8⇨ &e⚡ &764 J/t"
+FN_BLOCK_BREAKER_III:
+  name: "&4Electric Block Breaker III"
+  description:
+    - ""
+    - "&6Place block in front"
+    - "&6of the dispenser to break"
+    - "&d(Vanilla)"
+    - ""
+    - "&eRate: &eticks"
+    - ""
+    - "&d&oFN Machinery"
+    - ""
+    - "2048"
+    - "&8⇨ &e⚡ &7128 J/t"
+FN_MYSTERY_STICK_1:
+  name: "&cMysterious Stick"
+  description:
+    - "&fI wonder what this stick does"
+FN_MYSTERY_STICK_2:
+  name: "&cMysterious Stick II"
+  description:
+    - "&fAnother stick of no matter what is it"
+FN_MYSTERY_STICK_3:
+  name: "&cMysterious Stick III"
+  description:
+    - "&fI feel coordinated when holding this stick"
+FN_MYSTERY_STICK_4:
+  name: "&cMysterious Stick IV"
+  description:
+    - "&fDid I use this before or maybe not"
+FN_MYSTERY_STICK_5:
+  name: "&cMysterious Stick V"
+  description:
+    - "&fI know you are tired of this stick thing"
+FN_MYSTERY_STICK_6:
+  name: "&cMysterious Stick VI"
+  description:
+    - "&fMay the force and accuracy be with you"
+FN_MYSTERY_STICK_7:
+  name: "&cMysterious Stick VII"
+  description:
+    - "&fThe aura on this stick is mesmerizing"
+FN_MYSTERY_STICK_8:
+  name: "&cMysterious Stick VIII"
+  description:
+    - "&fThis stick is kinda heavy"
+FN_MYSTERY_STICK_9:
+  name: "&cMysterious Stick IX"
+  description:
+    - "&fYou need more mana when using this"
+FN_MYSTERY_STICK_10:
+  name: "&cMysterious Stick X"
+  description:
+    - "&fDeadly or creepy stick"
+FN_MYSTERY_STICK_11:
+  name: "&cMysterious Stick XI"
+  description:
+    - "&fThe stick of the nords"
+FN_STICK_ALTAR:
+  name: "&dFN Mystery Stick Altar"
+  description: []
+FN_GEM_ALTAR:
+  name: "&dFN Gem Altar"
+  description: []
+FN_GEM_UPGRADER:
+  name: "&dFN Gem Upgrader"
+  description: []
+FN_GEM_DOWNGRADER:
+  name: "&dFN Gem Downgrader"
+  description: []
+FN_MAGIC_ALTAR:
+  name: "&dFN Magic Altar"
+  description: []
+FN_GEAR_HELMET:
+  name: "&cFN's Field Tested Helmet"
+  description:
+    - "&c◬◬◬◬◬◬| &d&lLore &6|◬◬◬◬◬◬"
+    - ""
+    - "&fWear this helmet in the name of FN and"
+    - "&fevery battle should make it become more"
+    - "&fstronger with bonus attributes and enchants"
+    - ""
+    - "&c◈◈◈◈◈◈| &d&lStats &6|◈◈◈◈◈◈"
+    - "&eHelmet Level: 0"
+    - "&eProgress:"
+    - "&7[■■■■■■■■■■&7]"
+FN_GEAR_CHESTPLATE:
+  name: "&cFN's Battle Scarred Chestplate"
+  description:
+    - "&c◬◬◬◬◬◬| &d&lLore &6|◬◬◬◬◬◬"
+    - ""
+    - "&fThe armor from the past brought to life"
+    - "&fonce again. It becomes more powerful during"
+    - "&ftimes of war and conflict"
+    - ""
+    - "&c◈◈◈◈◈◈| &d&lStats &6|◈◈◈◈◈◈"
+    - "&eArmor Level: 0"
+    - "&eProgress:"
+    - "&7[■■■■■■■■■■&7]"
+FN_GEAR_LEGGINGS:
+  name: "&cFN's Chausses of Eminence"
+  description:
+    - "&c◬◬◬◬◬◬| &d&lLore &6|◬◬◬◬◬◬"
+    - ""
+    - "&fGlorious leggings worn by FN during war"
+    - "&fand was glorified on every victory against"
+    - "&fhis foes"
+    - ""
+    - "&c◈◈◈◈◈◈| &d&lStats &6|◈◈◈◈◈◈"
+    - "&eLeggings Level: 0"
+    - "&eProgress:"
+    - "&7[■■■■■■■■■■&7]"
+FN_GEAR_BOOTS:
+  name: "&cFN's Expedition Combat Boots"
+  description:
+    - "&c◬◬◬◬◬◬| &d&lLore &6|◬◬◬◬◬◬"
+    - ""
+    - "&fSoldiers from FN's army only wants to posses"
+    - "&fthis historical boots but it was kept"
+    - "&fhidden under the hands of the zion people"
+    - ""
+    - "&c◈◈◈◈◈◈| &d&lStats &6|◈◈◈◈◈◈"
+    - "&eBoots Level: 0"
+    - "&eProgress:"
+    - "&7[■■■■■■■■■■&7]"
+FN_STAFF_TP:
+  name: "&cStaff of Teleportation"
+  description:
+    - ""
+    - "&dTeleport to a target block by"
+    - "&dright clicking it"
+    - ""
+    - "&eUses: &eleft"
+FN_STAFF_INVI:
+  name: "&cStaff of Invisibility"
+  description:
+    - ""
+    - "&d6 seconds of invisibility"
+    - "&deven your armor and name"
+    - "&dare hidden"
+    - ""
+    - "&eUses: &eleft"
+FN_STAFF_LOCOMOTION:
+  name: "&cStaff of Locomotion"
+  description:
+    - ""
+    - "&dMove entities to a target location by right"
+    - "&dclicking to select and left click to move"
+    - ""
+    - "&eUses: &eleft"
+    - "&eEntity stored: none"
+FN_STAFF_HELLFIRE:
+  name: "&cStaff of Hellfire"
+  description:
+    - ""
+    - "&dSpawn an area of effect cloud"
+    - "&dwhere entities are set on fire"
+    - "&dif inside the radius for 8 seconds"
+    - ""
+    - "&eUses: &eleft"
+FN_STAFF_DEEPFREEZE:
+  name: "&cStaff of Deep-Freeze"
+  description:
+    - ""
+    - "&dSpawn an area of effect cloud where"
+    - "&dentities are being slowed by the freezing"
+    - "&dcold if inside the radius for 8 seconds"
+    - ""
+    - "&eUses: &eleft"
+FN_STAFF_CONFUSION:
+  name: "&cStaff of Confusion"
+  description:
+    - ""
+    - "&dSpawn an area of effect cloud where"
+    - "&dentities are confused of their direction"
+    - "&dif inside the radius for 8 seconds"
+    - ""
+    - "&eUses: &eleft"
+FN_STAFF_GRAVITY:
+  name: "&cStaff of Gravitational Pull"
+  description:
+    - ""
+    - "&dSpawn an area of effect cloud where"
+    - "&dentities are being pulled by the gravitational"
+    - "&dforce if inside the radius for 8 seconds"
+    - ""
+    - "&eUses: &eleft"
+FN_STAFF_STALLION:
+  name: "&cStaff of Stallion"
+  description:
+    - ""
+    - "&dSpawns a skeleton horse that is"
+    - "&drideable until passenger dismount"
+    - ""
+    - "&eUses: &eleft"
+FN_STAFF_FORCE:
+  name: "&cStaff of Force"
+  description:
+    - ""
+    - "&dRight click to spawn a cloud of effect"
+    - "&dthat gives a force push forward or"
+    - "&dshift-right-click to spawn a different cloud"
+    - "&dof effect that gives a backward force"
+    - ""
+    - "&eUses: &eleft"
+FN_STAFF_HEALING:
+  name: "&cStaff of Healing"
+  description:
+    - ""
+    - "&dRight click to spawn a cloud of effect"
+    - "&dthat heals the caster only if inside the"
+    - "&dradius for 8 seconds"
+    - ""
+    - "&eUses: &eleft"
+FN_STAFF_INVULNERABILITY:
+  name: "&cStaff of Invulnerability"
+  description:
+    - ""
+    - "&dRight click to spawn a cloud of effect"
+    - "&dthat protects entities inside the radius"
+    - "&dfrom damage for 8 seconds"
+    - ""
+    - "&eUses: &eleft"
+FN_STAFF_EXPLOSION:
+  name: "&cStaff of Explosion"
+  description:
+    - ""
+    - "&dRight click a target block to"
+    - "&dyield an explosion causing damage"
+    - ""
+    - "&eUses: &eleft"
+FN_STAFF_MUSTER:
+  name: "&cStaff of Muster"
+  description:
+    - ""
+    - "&dRight click a target block to teleport"
+    - "&dnearby entities that are on ground"
+    - "&dwithin 50 block radius"
+    - ""
+    - "&eUses: &eleft"
+FN_STAFF_AWARENESS:
+  name: "&cStaff of Awareness"
+  description:
+    - ""
+    - "&dRight click to receive information"
+    - "&dregarding the nearest players around"
+    - "&d50 block radius"
+    - ""
+    - "&eUses: &eleft"
+FN_STAFF_MINERALS:
+  name: "&cStaff of Minerals"
+  description:
+    - ""
+    - "&dRight click to receive mythical"
+    - "&dinformation that awaits upon using"
+    - "&dthe staff"
+    - ""
+    - "&eUses: &eleft"
+FN_STAFF_FANGS:
+  name: "&cStaff of Fangs"
+  description:
+    - ""
+    - "&dRight click a target block to"
+    - "&dspawn evoker fangs that causes"
+    - "&ddamage to entities"
+    - ""
+    - "&eUses: &eleft"
+FN_STAFF_SKULLS:
+  name: "&cStaff of Skulls"
+  description:
+    - ""
+    - "&dRight click to launch"
+    - "&dwither skull projectiles"
+    - ""
+    - "&eUses: &eleft"
+FN_STAFF_AIR_STRIDER:
+  name: "&cStaff of Air Strider"
+  description:
+    - ""
+    - "&dRight click to gain the ability to"
+    - "&dwalk on the air for 10 seconds"
+    - ""
+    - "&eUses: &eleft"
+FN_STAFF_COBWEB:
+  name: "&cStaff of Cobweb"
+  description:
+    - ""
+    - "&dRight click a target block"
+    - "&dto spawn a wall of cobwebs"
+    - ""
+    - "&eUses: &eleft"
+FN_QUIVER:
+  name: "&bBow Quiver (Normal)"
+  description:
+    - ""
+    - "&dStore inside the quiver"
+    - "&dby right clicking arrows or"
+    - "&dshift click quiver to withdraw"
+    - ""
+    - "&eClick to change state"
+    - "&eSize: 192 Arrows"
+    - "&eArrows: &f0"
+    - "&eState: Closed (No Arrows)"
+FN_SPECTRAL_QUIVER:
+  name: "&aBow Quiver (Spectral)"
+  description:
+    - ""
+    - "&dStore inside the quiver by"
+    - "&dright clicking spectral arrows or"
+    - "&dshift click quiver to withdraw"
+    - ""
+    - "&eClick to close/open"
+    - "&eSize: 192 Spectral Arrows"
+    - "&eArrows: &f0"
+    - "&eState: Closed (No Arrows)"
+FN_UPGRADED_QUIVER:
+  name: "&6Upgraded Bow Quiver (Normal)"
+  description:
+    - ""
+    - "&dStore inside the quiver"
+    - "&dby right clicking arrows or"
+    - "&dshift click to withdraw"
+    - ""
+    - "&eClick to change state"
+    - "&eSize: 288 Arrows"
+    - "&eArrows: &f0"
+    - "&eState: Closed (No Arrows)"
+FN_UPGRADED_SPECTRAL_QUIVER:
+  name: "&cUpgraded Bow Quiver (Spectral)"
+  description:
+    - ""
+    - "&dStore inside the quiver"
+    - "&dby right clicking spectral arrows or"
+    - "&dshift click quiver to withdraw"
+    - ""
+    - "&eClick to change state"
+    - "&eSize: 288 Arrows"
+    - "&eArrows: &f0"
+    - "&eState: Closed (No Arrows)"
+FN_HOE_5X5:
+  name: "&cFN's Hoe"
+  description:
+    - ""
+    - "&dCan soil/till land and harvest"
+    - "&dcrops in a 5x5 square area"
+FN_HOE_5X5_AUTO_PLANT:
+  name: "&cFN's Reseeding Hoe"
+  description:
+    - ""
+    - "&dCan soil/till land and harvest"
+    - "&dcrops in a 5x5 square area"
+    - ""
+    - "&dAuto plants if the crops are"
+    - "&dharvested at maximum age"
+FN_GEM_INFERNO:
+  name: "&cInferno Gem"
+  description:
+    - ""
+    - "&eA chance to set enemies in a"
+    - "&e8 block radius on fire for 4 seconds"
+    - ""
+    - "&c◢◤◢◤◢◤ Tiers &6◥◣◥◣◥◣"
+    - "&6⨳ Tier I: &e%"
+    - "&6⨳ Tier II: &e%"
+    - "&6⨳ Tier III: &e%"
+    - "&6⨳ Tier IV: &e%"
+    - "&c◢◤◢◤◢◤◢◤◢◤◢&6◣◥◣◥◣◥◣◥◣◥◣"
+    - ""
+    - "&dDrag and drop on a sword"
+    - "&dto bind this gem"
+FN_GEM_ARMOR_IMPAIR:
+  name: "&cArmor Impair Gem"
+  description:
+    - ""
+    - "&eA chance to deal extra 8 durability"
+    - "&edamage to all enemy armor"
+    - ""
+    - "&c◢◤◢◤◢◤ Tiers &6◥◣◥◣◥◣"
+    - "&6⨳ Tier I: &e%"
+    - "&6⨳ Tier II: &e%"
+    - "&6⨳ Tier III: &e%"
+    - "&6⨳ Tier IV: &e%"
+    - "&c◢◤◢◤◢◤◢◤◢◤◢&6◣◥◣◥◣◥◣◥◣◥◣"
+    - ""
+    - "&dDrag and drop on a sword or axe"
+    - "&dto bind this gem"
+FN_GEM_TELEPATHY:
+  name: "&cTelepathy Gem"
+  description:
+    - ""
+    - "&eAutomatically places blocks broken by"
+    - "&ethe tool in the player's inventory"
+    - ""
+    - "&dDrag and drop on a tool"
+    - "&dto bind this gem"
+FN_GEM_THUNDER:
+  name: "&cThunderbolt Gem"
+  description:
+    - ""
+    - "&eA chance to strike"
+    - "&elightning to enemies"
+    - ""
+    - "&c◢◤◢◤◢◤ Tiers &6◥◣◥◣◥◣"
+    - "&6⨳ Tier I: &e%"
+    - "&6⨳ Tier II: &e%"
+    - "&6⨳ Tier III: &e%"
+    - "&6⨳ Tier IV: &e%"
+    - "&c◢◤◢◤◢◤◢◤◢◤◢&6◣◥◣◥◣◥◣◥◣◥◣"
+    - ""
+    - "&dDrag and drop on a sword or axe"
+    - "&dto bind this gem"
+FN_GEM_HASTY:
+  name: "&cHasty Gem"
+  description:
+    - ""
+    - "&eA chance to receive 5 seconds"
+    - "&eof haste when mining ores"
+    - ""
+    - "&c◢◤◢◤◢◤ Tiers &6◥◣◥◣◥◣"
+    - "&6⨳ Tier I: &e%"
+    - "&6⨳ Tier II: &e%"
+    - "&6⨳ Tier III: &e%"
+    - "&6⨳ Tier IV: &e%"
+    - "&c◢◤◢◤◢◤◢◤◢◤◢&6◣◥◣◥◣◥◣◥◣◥◣"
+    - ""
+    - "&dDrag and drop on a tool"
+    - "&dto bind this gem"
+FN_GEM_THORN_AWAY:
+  name: "&cThorn Away Gem"
+  description:
+    - ""
+    - "&eA chance to negate"
+    - "&eall thorn damage"
+    - ""
+    - "&c◢◤◢◤◢◤ Tiers &6◥◣◥◣◥◣"
+    - "&6⨳ Tier I: &e%"
+    - "&6⨳ Tier II: &e%"
+    - "&6⨳ Tier III: &e%"
+    - "&6⨳ Tier IV: &e%"
+    - "&c◢◤◢◤◢◤◢◤◢◤◢&6◣◥◣◥◣◥◣◥◣◥◣"
+    - ""
+    - "&dDrag and drop on a chestplate"
+    - "&dto bind this gem"
+FN_GEM_IMPOSTOR:
+  name: "&cImpostor Gem"
+  description:
+    - ""
+    - "&eA chance to teleport behind"
+    - "&ethe player that is hitting you"
+    - ""
+    - "&c◢◤◢◤◢◤ Tiers &6◥◣◥◣◥◣"
+    - "&6⨳ Tier I: &e%"
+    - "&6⨳ Tier II: &e%"
+    - "&6⨳ Tier III: &e%"
+    - "&6⨳ Tier IV: &e%"
+    - "&c◢◤◢◤◢◤◢◤◢◤◢&6◣◥◣◥◣◥◣◥◣◥◣"
+    - ""
+    - "&dDrag and drop on a helmet"
+    - "&dto bind this gem"
+FN_GEM_PSYCHOKINESIS:
+  name: "&cPsychokinesis Gem"
+  description:
+    - ""
+    - "&eA chance to move enemies towards"
+    - "&eyou when got hit by your arrow"
+    - ""
+    - "&c◢◤◢◤◢◤ Tiers &6◥◣◥◣◥◣"
+    - "&6⨳ Tier I: &e%"
+    - "&6⨳ Tier II: &e%"
+    - "&6⨳ Tier III: &e%"
+    - "&6⨳ Tier IV: &e%"
+    - "&c◢◤◢◤◢◤◢◤◢◤◢&6◣◥◣◥◣◥◣◥◣◥◣"
+    - ""
+    - "&dDrag and drop on a bow"
+    - "&dto bind this gem"
+FN_GEM_AXETHROWIE:
+  name: "&cAxe throwie Gem"
+  description:
+    - ""
+    - "&eGives you the ability to throw axes"
+    - "&ethat can hit entities and damage them"
+    - ""
+    - "&dDrag and drop on an axe"
+    - "&dto bind this gem"
+FN_GEM_TRI_SWORD:
+  name: "&cTri-Sword Gem"
+  description:
+    - ""
+    - "&eGives you the ability to throw your"
+    - "&esword with additional 2 swords around it that"
+    - "&ecan cut through entities and damage them"
+    - ""
+    - "&dDrag and drop on an sword"
+    - "&dto bind this gem"
+FN_GEM_DAMNATION:
+  name: "&cDamnation Gem"
+  description:
+    - ""
+    - "&eShift Right click the weapon that has this gem"
+    - "&ethe weapon is ready to serve you in battle and"
+    - "&ewill attack entities in the direction of your"
+    - "&ecrosshair after 8 seconds"
+    - ""
+    - "&dDrag and drop on sword or axe"
+    - "&dto bind this gem"
+FN_GEM_RETALIATE:
+  name: "&cRetaliate Gem"
+  description:
+    - ""
+    - "&eAllows your weapons to return back to"
+    - "&eyou after throwing it despite the distance."
+    - "&eThis gem requires throwable weapon gem"
+    - "&efrom which one below:"
+    - "&e- Damnation Gem"
+    - "&e- Tri-Sword Gem"
+    - "&e- Axe Throwie Gem"
+    - ""
+    - "&dDrag and drop on sword or axe"
+    - "&dto bind this gem"
+FN_GEM_BLINDBIND:
+  name: "&cBlind bind Gem"
+  description:
+    - ""
+    - "&eA chance to blind enemies for"
+    - "&e4 seconds when got hit by your arrow"
+    - ""
+    - "&c◢◤◢◤◢◤ Tiers &6◥◣◥◣◥◣"
+    - "&6⨳ Tier I: &e%"
+    - "&6⨳ Tier II: &e%"
+    - "&6⨳ Tier III: &e%"
+    - "&6⨳ Tier IV: &e%"
+    - "&c◢◤◢◤◢◤◢◤◢◤◢&6◣◥◣◥◣◥◣◥◣◥◣"
+    - ""
+    - "&dDrag and drop on a bow"
+    - "&dto bind this gem"
+FN_GEM_GUARDIAN:
+  name: "&cGuardian Gem"
+  description:
+    - ""
+    - "&eA chance to spawn a guardian that will"
+    - "&efight for you until death, the armor that"
+    - "&ehas this gem must be worn in order for"
+    - "&ethe guardian to protect you from enemies"
+    - "&ewhen you are being attacked."
+    - "&f- Unequipped armor will remove any active guardians"
+    - "&f- Guardians don't attack other guardians and"
+    - "  &fcan only attack the owner of that guardian"
+    - ""
+    - "&c◢◤◢◤◢◤ Tiers &6◥◣◥◣◥◣"
+    - "&6⨳ Tier I: &e%"
+    - "&6⨳ Tier II: &e%"
+    - "&6⨳ Tier III: &e%"
+    - "&6⨳ Tier IV: &e%"
+    - "&c◢◤◢◤◢◤◢◤◢◤◢&6◣◥◣◥◣◥◣◥◣◥◣"
+    - ""
+    - "&dDrag and drop on a chestplate"
+    - "&dto bind this gem"
+FN_GEM_DISRUPTED:
+  name: "&cDisrupted Gem"
+  description:
+    - ""
+    - "&eA chance to prevent your enemy"
+    - "&eguardian from spawning"
+    - ""
+    - "&c◢◤◢◤◢◤ Tiers &6◥◣◥◣◥◣"
+    - "&6⨳ Tier I: &e%"
+    - "&6⨳ Tier II: &e%"
+    - "&6⨳ Tier III: &e%"
+    - "&6⨳ Tier IV: &e%"
+    - "&c◢◤◢◤◢◤◢◤◢◤◢&6◣◥◣◥◣◥◣◥◣◥◣"
+    - ""
+    - "&dDrag and drop on a sword"
+    - "&dto bind this gem"
+FN_GEM_ARROW_AVERT:
+  name: "&cArrow Avert Gem"
+  description:
+    - ""
+    - "&eA chance to prevent arrow shot by a player"
+    - "&efrom hitting you, arrow is averted taking"
+    - "&eno damage when you get hit"
+    - ""
+    - "&c◢◤◢◤◢◤ Tiers &6◥◣◥◣◥◣"
+    - "&6⨳ Tier I: &e%"
+    - "&6⨳ Tier II: &e%"
+    - "&6⨳ Tier III: &e%"
+    - "&6⨳ Tier IV: &e%"
+    - "&c◢◤◢◤◢◤◢◤◢◤◢&6◣◥◣◥◣◥◣◥◣◥◣"
+    - ""
+    - "&dDrag and drop on any armor type"
+    - "&dto bind this gem"
+FN_GEM_DEBERSERK:
+  name: "&cDeberserk Gem"
+  description:
+    - ""
+    - "&eA chance to decrease damage"
+    - "&etaken from axes by 40%"
+    - ""
+    - "&c◢◤◢◤◢◤ Tiers &6◥◣◥◣◥◣"
+    - "&6⨳ Tier I: &e%"
+    - "&6⨳ Tier II: &e%"
+    - "&6⨳ Tier III: &e%"
+    - "&6⨳ Tier IV: &e%"
+    - "&c◢◤◢◤◢◤◢◤◢◤◢&6◣◥◣◥◣◥◣◥◣◥◣"
+    - ""
+    - "&dDrag and drop on any armor type"
+    - "&dto bind this gem"
+FN_GEM_PARRY:
+  name: "&cParry Gem"
+  description:
+    - ""
+    - "&eA chance to decrease damage"
+    - "&etaken from swords by 40%"
+    - ""
+    - "&c◢◤◢◤◢◤ Tiers &6◥◣◥◣◥◣"
+    - "&6⨳ Tier I: &e%"
+    - "&6⨳ Tier II: &e%"
+    - "&6⨳ Tier III: &e%"
+    - "&6⨳ Tier IV: &e%"
+    - "&c◢◤◢◤◢◤◢◤◢◤◢&6◣◥◣◥◣◥◣◥◣◥◣"
+    - ""
+    - "&dDrag and drop on any armor type"
+    - "&dto bind this gem"
+FN_GEM_FLAWLESS_UNBIND:
+  name: "&bFlawless Unbind Gem"
+  description:
+    - ""
+    - "&e% chance to remove any of the"
+    - "&eselected gem from an item"
+    - ""
+    - "&f&lInstruction"
+    - "&dRight hand: &cUnbind Gem"
+    - "&dLeft hand: &cWeapon/Armor/Tools"
+    - "&dAction: &cRight click"
+FN_GEM_PRECIOUS_UNBIND:
+  name: "&dPrecious Unbind Gem"
+  description:
+    - ""
+    - "&e% chance to remove any of the"
+    - "&eselected gem from an item"
+    - ""
+    - "&f&lInstruction"
+    - "&dRight hand: &cUnbind Gem"
+    - "&dLeft hand: &cWeapon/Armor/Tools"
+    - "&dAction: &cRight click"
+FN_GEM_BLEMISHED_UNBIND:
+  name: "&aBlemished Unbind Gem"
+  description:
+    - ""
+    - "&e% chance to remove any of the"
+    - "&eselected gem from an item"
+    - ""
+    - "&f&lInstruction"
+    - "&dRight hand: &cUnbind Gem"
+    - "&dLeft hand: &cWeapon/Armor/Tools"
+    - "&dAction: &cRight click"
+FN_GEM_DAMAGED_UNBIND:
+  name: "&6Damaged Unbind Gem"
+  description:
+    - ""
+    - "&e% chance to remove any of the"
+    - "&eselected gem from an item"
+    - ""
+    - "&f&lInstruction"
+    - "&dRight hand: &cUnbind Gem"
+    - "&dLeft hand: &cWeapon/Armor/Tools"
+    - "&dAction: &cRight click"
+FN_GEM_ADAMANTINE:
+  name: "&cAdamantine Gem"
+  description:
+    - ""
+    - "&eA chance to prevent weapon or tools"
+    - "&efrom having durability damage"
+    - ""
+    - "&c◢◤◢◤◢◤ Tiers &6◥◣◥◣◥◣"
+    - "&6⨳ Tier I: &e%"
+    - "&6⨳ Tier II: &e%"
+    - "&6⨳ Tier III: &e%"
+    - "&6⨳ Tier IV: &e%"
+    - "&c◢◤◢◤◢◤◢◤◢◤◢&6◣◥◣◥◣◥◣◥◣◥◣"
+    - ""
+    - "&dDrag and drop on weapon or"
+    - "&dtools to bind this gem"
+FN_GEM_STOUT:
+  name: "&cStout Gem"
+  description:
+    - ""
+    - "&eA chance to prevent armor from"
+    - "&etaking any durability damage"
+    - ""
+    - "&c◢◤◢◤◢◤ Tiers &6◥◣◥◣◥◣"
+    - "&6⨳ Tier I: &e%"
+    - "&6⨳ Tier II: &e%"
+    - "&6⨳ Tier III: &e%"
+    - "&6⨳ Tier IV: &e%"
+    - "&c◢◤◢◤◢◤◢◤◢◤◢&6◣◥◣◥◣◥◣◥◣◥◣"
+    - ""
+    - "&dDrag and drop on any armor type"
+    - "&dto bind this gem"
+FN_GEM_AWAKEN:
+  name: "&cAwaken Gem"
+  description:
+    - ""
+    - "&eA chance to instant resurrect the"
+    - "&eplayer upon death at same location"
+    - ""
+    - "&c◢◤◢◤◢◤ Tiers &6◥◣◥◣◥◣"
+    - "&6⨳ Tier I: &e%"
+    - "&6⨳ Tier II: &e%"
+    - "&6⨳ Tier III: &e%"
+    - "&6⨳ Tier IV: &e%"
+    - "&c◢◤◢◤◢◤◢◤◢◤◢&6◣◥◣◥◣◥◣◥◣◥◣"
+    - ""
+    - "&dDrag and drop on a helmet"
+    - "&dto bind this gem"
+FN_GEM_AVENGE:
+  name: "&cAvenge Gem"
+  description:
+    - ""
+    - "&eA chance to spawn primed creeper"
+    - "&eupon player death at same location"
+    - ""
+    - "&c◢◤◢◤◢◤ Tiers &6◥◣◥◣◥◣"
+    - "&6⨳ Tier I: &e%"
+    - "&6⨳ Tier II: &e%"
+    - "&6⨳ Tier III: &e%"
+    - "&6⨳ Tier IV: &e%"
+    - "&c◢◤◢◤◢◤◢◤◢◤◢&6◣◥◣◥◣◥◣◥◣◥◣"
+    - ""
+    - "&dDrag and drop on a boots"
+    - "&dto bind this gem"
+FN_GEM_ACHILLES_HEEL:
+  name: "&cAchilles Heel Gem"
+  description:
+    - ""
+    - "&eA chance to deal 3.5x damage when"
+    - "&ethe arrow hits the achilles heel"
+    - "&eof an entity or player"
+    - ""
+    - "&c◢◤◢◤◢◤ Tiers &6◥◣◥◣◥◣"
+    - "&6⨳ Tier I: &e%"
+    - "&6⨳ Tier II: &e%"
+    - "&6⨳ Tier III: &e%"
+    - "&6⨳ Tier IV: &e%"
+    - "&c◢◤◢◤◢◤◢◤◢◤◢&6◣◥◣◥◣◥◣◥◣◥◣"
+    - ""
+    - "&dDrag and drop on a bow or crossbow"
+    - "&dto bind this gem"
+FN_GEM_DISARMOR:
+  name: "&cDisarmor Gem"
+  description:
+    - ""
+    - "&eA chance of unequipping a random"
+    - "&earmor piece from your enemy"
+    - ""
+    - "&c◢◤◢◤◢◤ Tiers &6◥◣◥◣◥◣"
+    - "&6⨳ Tier I: &e%"
+    - "&6⨳ Tier II: &e%"
+    - "&6⨳ Tier III: &e%"
+    - "&6⨳ Tier IV: &e%"
+    - "&c◢◤◢◤◢◤◢◤◢◤◢&6◣◥◣◥◣◥◣◥◣◥◣"
+    - ""
+    - "&dDrag and drop on sword or axe"
+    - "&dto bind this gem"
+FN_GEM_DISARM:
+  name: "&cDisarm Gem"
+  description:
+    - ""
+    - "&eA chance of unequipping the weapon"
+    - "&ethat your enemy is holding"
+    - ""
+    - "&c◢◤◢◤◢◤ Tiers &6◥◣◥◣◥◣"
+    - "&6⨳ Tier I: &e%"
+    - "&6⨳ Tier II: &e%"
+    - "&6⨳ Tier III: &e%"
+    - "&6⨳ Tier IV: &e%"
+    - "&c◢◤◢◤◢◤◢◤◢◤◢&6◣◥◣◥◣◥◣◥◣◥◣"
+    - ""
+    - "&dDrag and drop on sword or axe"
+    - "&dto bind this gem"
+FN_GEM_SMOKE_CRIMINAL:
+  name: "&cSmoke Criminal Gem"
+  description:
+    - ""
+    - "&eA chance to become invulnerable for"
+    - "&e5 seconds when health is below 30%"
+    - "&ewhile being protected by the smoke"
+    - ""
+    - "&c◢◤◢◤◢◤ Tiers &6◥◣◥◣◥◣"
+    - "&6⨳ Tier I: &e%"
+    - "&6⨳ Tier II: &e%"
+    - "&6⨳ Tier III: &e%"
+    - "&6⨳ Tier IV: &e%"
+    - "&c◢◤◢◤◢◤◢◤◢◤◢&6◣◥◣◥◣◥◣◥◣◥◣"
+    - ""
+    - "&dDrag and drop on a boots"
+    - "&dto bind this gem"
+FN_GEM_LIFESTEAL:
+  name: "&cLifesteal Gem"
+  description:
+    - ""
+    - "&eA chance to steal 1 heart from"
+    - "&eyour enemy as long as you're"
+    - "&enot in full health"
+    - ""
+    - "&c◢◤◢◤◢◤ Tiers &6◥◣◥◣◥◣"
+    - "&6⨳ Tier I: &e%"
+    - "&6⨳ Tier II: &e%"
+    - "&6⨳ Tier III: &e%"
+    - "&6⨳ Tier IV: &e%"
+    - "&c◢◤◢◤◢◤◢◤◢◤◢&6◣◥◣◥◣◥◣◥◣◥◣"
+    - ""
+    - "&dDrag and drop on sword or axe"
+    - "&dto bind this gem"
+FN_GEM_ATROPHY:
+  name: "&cAtrophy Gem"
+  description:
+    - ""
+    - "&eA chance to deal wither effect"
+    - "&eat your enemies that lasts for"
+    - "&e6 seconds"
+    - ""
+    - "&c◢◤◢◤◢◤ Tiers &6◥◣◥◣◥◣"
+    - "&6⨳ Tier I: &e%"
+    - "&6  - Level 1 wither effect"
+    - "&6⨳ Tier II: &e%"
+    - "&6  - Level 2 wither effect"
+    - "&6⨳ Tier III: &e%"
+    - "&6  - Level 3 wither effect"
+    - "&6⨳ Tier IV: &e%"
+    - "&6  - Level 4 wither effect"
+    - "&c◢◤◢◤◢◤◢◤◢◤◢&6◣◥◣◥◣◥◣◥◣◥◣"
+    - ""
+    - "&dDrag and drop on sword or axe"
+    - "&dto bind this gem"
+FN_GEM_BANE:
+  name: "&cBane Gem"
+  description:
+    - ""
+    - "&eA chance to deal poison effect"
+    - "&eat your enemies that lasts for"
+    - "&e6 seconds"
+    - ""
+    - "&c◢◤◢◤◢◤ Tiers &6◥◣◥◣◥◣"
+    - "&6⨳ Tier I: &e%"
+    - "&6  - Level 1 poison effect"
+    - "&6⨳ Tier II: &e%"
+    - "&6  - Level 2 poison effect"
+    - "&6⨳ Tier III: &e%"
+    - "&6  - Level 3 poison effect"
+    - "&6⨳ Tier IV: &e%"
+    - "&6  - Level 4 poison effect"
+    - "&c◢◤◢◤◢◤◢◤◢◤◢&6◣◥◣◥◣◥◣◥◣◥◣"
+    - ""
+    - "&dDrag and drop on sword or axe"
+    - "&dto bind this gem"
+FN_GEM_SEDATE:
+  name: "&cSedate Gem"
+  description:
+    - ""
+    - "&eA chance to deal slow effect"
+    - "&eat your enemies that lasts for"
+    - "&e4 seconds"
+    - ""
+    - "&c◢◤◢◤◢◤ Tiers &6◥◣◥◣◥◣"
+    - "&6⨳ Tier I: &e%"
+    - "&6  - Level 1 slow effect"
+    - "&6⨳ Tier II: &e%"
+    - "&6  - Level 2 slow effect"
+    - "&6⨳ Tier III: &e%"
+    - "&6  - Level 3 slow effect"
+    - "&6⨳ Tier IV: &e%"
+    - "&6  - Level 4 slow effect"
+    - "&c◢◤◢◤◢◤◢◤◢◤◢&6◣◥◣◥◣◥◣◥◣◥◣"
+    - ""
+    - "&dDrag and drop on sword or axe"
+    - "&dto bind this gem"
+FN_GEM_DECREPIT:
+  name: "&cDecrepit Gem"
+  description:
+    - ""
+    - "&eA chance to deal weakness effect"
+    - "&eat your enemies that lasts for"
+    - "&e6 seconds"
+    - ""
+    - "&c◢◤◢◤◢◤ Tiers &6◥◣◥◣◥◣"
+    - "&6⨳ Tier I: &e%"
+    - "&6  - Level 1 weakness effect"
+    - "&6⨳ Tier II: &e%"
+    - "&6  - Level 2 weakness effect"
+    - "&6⨳ Tier III: &e%"
+    - "&6  - Level 3 weakness effect"
+    - "&6⨳ Tier IV: &e%"
+    - "&6  - Level 4 weakness effect"
+    - "&c◢◤◢◤◢◤◢◤◢◤◢&6◣◥◣◥◣◥◣◥◣◥◣"
+    - ""
+    - "&dDrag and drop on any armor type"
+    - "&dto bind this gem"
+FN_GEM_DECEPTION:
+  name: "&cDeception Gem"
+  description:
+    - ""
+    - "&eA chance to deal blindness effect"
+    - "&eat your enemies that lasts for"
+    - "&e6 seconds"
+    - ""
+    - "&c◢◤◢◤◢◤ Tiers &6◥◣◥◣◥◣"
+    - "&6⨳ Tier I: &e%"
+    - "&6  - Level 1 blindness effect"
+    - "&6⨳ Tier II: &e%"
+    - "&6  - Level 2 blindness effect"
+    - "&6⨳ Tier III: &e%"
+    - "&6  - Level 3 blindness effect"
+    - "&6⨳ Tier IV: &e%"
+    - "&6  - Level 4 blindness effect"
+    - "&c◢◤◢◤◢◤◢◤◢◤◢&6◣◥◣◥◣◥◣◥◣◥◣"
+    - ""
+    - "&dDrag and drop on any armor type"
+    - "&dto bind this gem"
+FN_GEM_CELERITY:
+  name: "&cCelerity Gem"
+  description:
+    - ""
+    - "&eA chance to deal swiftness effect"
+    - "&eat your enemies that lasts for"
+    - "&e6 seconds"
+    - ""
+    - "&c◢◤◢◤◢◤ Tiers &6◥◣◥◣◥◣"
+    - "&6⨳ Tier I: &e%"
+    - "&6  - Level 1 swiftness effect"
+    - "&6⨳ Tier II: &e%"
+    - "&6  - Level 2 swiftness effect"
+    - "&6⨳ Tier III: &e%"
+    - "&6  - Level 3 swiftness effect"
+    - "&6⨳ Tier IV: &e%"
+    - "&6  - Level 4 swiftness effect"
+    - "&c◢◤◢◤◢◤◢◤◢◤◢&6◣◥◣◥◣◥◣◥◣◥◣"
+    - ""
+    - "&dDrag and drop on any armor type"
+    - "&dto bind this gem"
+FN_GEM_LOOT:
+  name: "&cLoot Gem"
+  description:
+    - ""
+    - "&eA chance to steal money from your"
+    - "&eenemy worth 4$ of currency. Make"
+    - "&eyour enemies lose money!"
+    - ""
+    - "&c◢◤◢◤◢◤ Tiers &6◥◣◥◣◥◣"
+    - "&6⨳ Tier I: &e%"
+    - "&6⨳ Tier II: &e%"
+    - "&6⨳ Tier III: &e%"
+    - "&6⨳ Tier IV: &e%"
+    - "&c◢◤◢◤◢◤◢◤◢◤◢&6◣◥◣◥◣◥◣◥◣◥◣"
+    - ""
+    - "&dDrag and drop on sword or axe"
+    - "&dto bind this gem"
+FN_GEM_SHOCKWAVE:
+  name: "&cShockwave Gem"
+  description:
+    - ""
+    - "&eA chance to deal shockwave damage"
+    - "&eto all enemies in a 8 block radius"
+    - "&eand bounce them off the ground!"
+    - ""
+    - "&c◢◤◢◤◢◤ Tiers &6◥◣◥◣◥◣"
+    - "&6⨳ Tier I: &e%"
+    - "&6  - Damage: &f4"
+    - "&6⨳ Tier II: &e%"
+    - "&6  - Damage: &f8"
+    - "&6⨳ Tier III: &e%"
+    - "&6  - Damage: &f12"
+    - "&6⨳ Tier IV: &e%"
+    - "&6  - Damage: &f16"
+    - "&c◢◤◢◤◢◤◢◤◢◤◢&6◣◥◣◥◣◥◣◥◣◥◣"
+    - ""
+    - "&dDrag and drop on any armor type"
+    - "&dto bind this gem"
+FN_GEM_BERSERK:
+  name: "&cBerserk Gem"
+  description:
+    - ""
+    - "&eA chance to deal more damage against"
+    - "&eenemies when your health is below 40%."
+    - "&eHigher tier gem, much deadly!"
+    - ""
+    - "&c◢◤◢◤◢◤ Tiers &6◥◣◥◣◥◣"
+    - "&6⨳ Tier I: &e%"
+    - "&6  - Damage: &f+6% base damage"
+    - "&6⨳ Tier II: &e%"
+    - "&6  - Damage: &f+12% base damage"
+    - "&6⨳ Tier III: &e%"
+    - "&6  - Damage: &f+18% base damage"
+    - "&6⨳ Tier IV: &e%"
+    - "&6  - Damage: &f+36% base damage"
+    - "&c◢◤◢◤◢◤◢◤◢◤◢&6◣◥◣◥◣◥◣◥◣◥◣"
+    - ""
+    - "&dDrag and drop on sword or axe"
+    - "&dto bind this gem"
+FN_GEM_UPGRADES_DISPLAY_ITEM:
+  name: "&bGem Tier Upgrades"
+  description:
+    - ""
+    - "&dClick this item to know how to upgrade"
+    - "&dgems and what recipe are needed in the"
+    - "&dFN Gem Upgrader Multiblock"
+FN_GEM_DOWNGRADE_DISPLAY_ITEM:
+  name: "&bGem Tier Downgrades"
+  description:
+    - ""
+    - "&dClick this item to know how to downgrade"
+    - "&dgems and what recipe are needed in the"
+    - "&dFN Gem Downgrader Multiblock"
+FN_GEM_FINE_JASPER_CRAFTING:
+  name: "&bFine Jasper Gemstone"
+  description:
+    - ""
+    - "&fA shiny gem needed for upgrading"
+    - "&fthose fn gems that you've been using"
+    - "&fsince then"
+FN_BLOCK_ROTATOR:
+  name: "&cFN's Block Rotator"
+  description:
+    - ""
+    - "&dRight click to rotate orientable or"
+    - "&ddirectional blocks. &f(Terracotta, Chains, etc)"
+    - ""
+    - "&dShift right click to flip slab, bisected"
+    - "&dor orientable blocks &f(Slabs, stairs, etc)"
+FN_AUTO_LADDER:
+  name: "&cFN's Auto Ladder"
+  description:
+    - ""
+    - "&dAutomatically places a ladder from top to"
+    - "&dbottom with a max distance of 8 blocks"
+FN_ORIENT_PEARL:
+  name: "&cFN's Orient Pearl"
+  description:
+    - ""
+    - "&dAn ender pearl that teleports"
+    - "&dthe player together with the"
+    - "&dmounted entity (Horse, etc)"
+FN_THROWABLE_TORCH:
+  name: "&cFN's Throwable Torch"
+  description:
+    - ""
+    - "&dRight click to throw in the target"
+    - "&ddirection and it will be placed if"
+    - "&da block got hit. Entities who got hit"
+    - "&dwill be set on fire for 4 seconds"
+FN_JUKEBOX_I:
+  name: "&5F&dN &fJ&bu&ek&ce&5b&do&4x I"
+  description:
+    - ""
+    - "&eA jukebox that can store and play"
+    - "&emusic disc, it can loop through"
+    - "&eentire disc slots and autoplay"
+    - "&ea new disc after one has finished"
+    - ""
+    - "&dSlot amount: &d&o3 music disc slots"
+    - ""
+    - "512"
+    - "3"
+FN_JUKEBOX_II:
+  name: "&5F&dN &fJ&bu&ek&ce&5b&do&4x II"
+  description:
+    - ""
+    - "&eA jukebox that can store and play"
+    - "&emusic disc, it can loop through"
+    - "&eentire disc slots and autoplay"
+    - "&ea new disc after one has finished"
+    - ""
+    - "&dSlot amount: &d&o7 music disc slots"
+    - ""
+    - "768"
+    - "8"
+FN_JUKEBOX_III:
+  name: "&5F&dN &fJ&bu&ek&ce&5b&do&4x III"
+  description:
+    - ""
+    - "&eA jukebox that can store and play"
+    - "&emusic disc, it can loop through"
+    - "&eentire disc slots and autoplay"
+    - "&ea new disc after one has finished"
+    - ""
+    - "&dSlot amount: &d&o12 music disc slots"
+    - ""
+    - "1024"
+    - "16"

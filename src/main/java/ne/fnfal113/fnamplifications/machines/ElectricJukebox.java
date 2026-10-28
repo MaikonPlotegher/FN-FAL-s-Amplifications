@@ -1,16 +1,16 @@
 package ne.fnfal113.fnamplifications.machines;
 
-import io.github.thebusybiscuit.slimefun4.api.MinecraftVersion;
-import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
-import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
-import io.github.thebusybiscuit.slimefun4.core.handlers.BlockBreakHandler;
-import io.github.thebusybiscuit.slimefun4.core.handlers.BlockPlaceHandler;
-import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.protection.Interaction;
-import io.github.thebusybiscuit.slimefun4.utils.ChestMenuUtils;
+import io.github.thebusybiscuit.slimefun5.api.MinecraftVersion;
+import io.github.thebusybiscuit.slimefun5.api.items.ItemGroup;
+import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItem;
+import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItemStack;
+import io.github.thebusybiscuit.slimefun5.api.recipes.RecipeType;
+import io.github.thebusybiscuit.slimefun5.core.handlers.BlockBreakHandler;
+import io.github.thebusybiscuit.slimefun5.core.handlers.BlockPlaceHandler;
+import io.github.thebusybiscuit.slimefun5.implementation.Slimefun;
+import io.github.thebusybiscuit.slimefun5.libraries.dough.items.CustomItemStack;
+import io.github.thebusybiscuit.slimefun5.libraries.dough.protection.Interaction;
+import io.github.thebusybiscuit.slimefun5.utils.ChestMenuUtils;
 
 import me.mrCookieSlime.CSCoreLibPlugin.Configuration.Config;
 import me.mrCookieSlime.Slimefun.Objects.handlers.BlockTicker;
@@ -122,7 +122,7 @@ public class ElectricJukebox extends AbstractJukeBox {
                 }
         );
 
-        createPreset(this, getItemName(), blockMenuPreset -> { // create inventory gui preset, use the current consumer input
+        createHeaderlessPreset(this, getItemName(), blockMenuPreset -> { // create inventory gui preset, use the current consumer input
             addGuiItems(blockMenuPreset);
             
             blockMenuPreset.addItem(5, NO_POWER);
@@ -167,6 +167,7 @@ public class ElectricJukebox extends AbstractJukeBox {
         new BlockMenuPreset(this.getId(), this.getItemName()) {
             @Override
             public void init() {
+              optOutOfHeaderItem();
               addGuiItems(this);
             }
 
@@ -293,7 +294,7 @@ public class ElectricJukebox extends AbstractJukeBox {
                     if(jukebox.getPlaying() != Material.AIR) {
                         menu.replaceExistingItem(
                             49, 
-                            new CustomItemStack(
+                            CustomItemStack.create(
                                 Material.PINK_STAINED_GLASS_PANE,
                                 "&d&lPlaying: " + jukebox.getPlaying().toString().replace("_", " "),
                                 "&eDuration : " + 
@@ -351,7 +352,7 @@ public class ElectricJukebox extends AbstractJukeBox {
 
     @Override
     public void changeStatus(BlockMenu invMenu){
-        invMenu.replaceExistingItem(49, new CustomItemStack(Material.MAGENTA_STAINED_GLASS_PANE,
+        invMenu.replaceExistingItem(49, CustomItemStack.create(Material.MAGENTA_STAINED_GLASS_PANE,
                 "&dNo music disc is being played",
                 "&ePlace a music disc then click",
                 "&eplay button or left/right arrows"));
@@ -545,7 +546,7 @@ public class ElectricJukebox extends AbstractJukeBox {
         BlockStorage.addBlockInfo(menu.getLocation(), "current_Slot", String.valueOf(cache.currentSlot));
 
         menu.replaceExistingItem(cache.currentSlot, 
-            new CustomItemStack(Material.PINK_STAINED_GLASS_PANE,
+            CustomItemStack.create(Material.PINK_STAINED_GLASS_PANE,
                 "&eNo music disc in current slot",
                 "&eplease change the slot"
             )
